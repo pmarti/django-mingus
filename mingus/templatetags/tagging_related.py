@@ -59,7 +59,7 @@ def tagged_get_related(parser, token):
         except ValueError:
             raise TemplateSyntaxError(_("%(tag)s tag was given a badly formatted option: '%(option)s'") % {
                 'tag': bits[0],
-                'option': bits[i],
+                'option': bits[1],
             })
 
     return TaggedGetRelatedNode(bits[1], bits[3], bits[5], **kwargs)

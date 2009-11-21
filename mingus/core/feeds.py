@@ -1,8 +1,8 @@
 from django.contrib.syndication.feeds import Feed
-from django.core.urlresolvers import reverse
 
 from basic.blog.models import Settings
 from django_proxy.models import Proxy
+
 
 class AllEntries(Feed):
     _settings = Settings.get_current()

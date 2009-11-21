@@ -1,15 +1,16 @@
-from django.conf.urls.defaults import *
+from django.conf.urls.defaults import url, include, patterns
 from django.contrib import admin
 from django.views.generic.simple import direct_to_template
 from django.conf import settings
-from basic.blog import views as blog_views
 from basic.blog.feeds import BlogPostsFeed, BlogPostsByCategory
 from basic.blog.sitemap import BlogSitemap
+from robots.views import rules_list
+
 from mingus.core.views import springsteen_results, springsteen_firehose, \
                             home_list, springsteen_category, contact_form, \
                             proxy_search
-from robots.views import rules_list
 from mingus.core.feeds import AllEntries
+
 
 admin.autodiscover()
 
@@ -75,7 +76,6 @@ urlpatterns += patterns('',
     (r'', include('basic.blog.urls')),
 )
 
-
 if settings.LOCAL_DEV:
     urlpatterns += patterns('django.views.static',
         (r'^%s(?P<path>.*)' % settings.STATIC_URL[1:], 'serve',
@@ -83,4 +83,3 @@ if settings.LOCAL_DEV:
         (r'^%s(?P<path>.*)' % settings.MEDIA_URL[1:], 'serve',
          {'document_root': settings.MEDIA_ROOT}),
     )
-

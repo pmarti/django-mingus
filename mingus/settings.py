@@ -1,17 +1,16 @@
 # -*- coding: utf-8 -*-
 
-import os, os.path, sys
-from os.path import join, dirname, normpath
-import re
+import os
+from os.path import join, dirname
 
-PROJECT_ROOT = os.path.dirname(__file__)
+PROJECT_ROOT = dirname(__file__)
 MEDIA_ROOT = join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
 STATIC_ROOT = join(MEDIA_ROOT, 'static')
 STATIC_URL = '/media/static/'
 ADMIN_MEDIA_PREFIX = '/admin_media/'
 
-SITE_ID=1
+SITE_ID = 1
 ROOT_URLCONF = 'mingus.urls'
 TIME_ZONE = 'America/New_York'
 SECRET_KEY = '+bq@o(jph^-*sfj4j%xukecxb0jae9lci&ysy=609hj@(l$47c'
@@ -19,11 +18,11 @@ USE_I18N = False
 HONEYPOT_FIELD_NAME = 'fonzie_kungfu'
 
 MANAGERS = (
-    ('fooper','your@emailaddress'),
+    ('fooper', 'your@emailaddress'),
 )
 
 TEMPLATE_DIRS = (
-  [os.path.join(PROJECT_ROOT, "templates")]
+    [os.path.join(PROJECT_ROOT, "templates")]
 )
 
 MIDDLEWARE_CLASSES = (
@@ -88,8 +87,6 @@ INSTALLED_APPS = (
 )
 
 try:
-   from local_settings import *
+    from local_settings import *
 except ImportError:
-   pass
-
-
+    pass
