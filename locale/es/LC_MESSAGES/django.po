@@ -1,0 +1,187 @@
+# django-mingus Spanish translation
+# Copyright (C) 2009
+# This file is distributed under the same license as the django-mingus package.
+# Pablo Marti pmargam@gmail.com
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-11-20 20:05+0100\n"
+"PO-Revision-Date: 2009-11-20 20:05+0100\n"
+"Last-Translator: Pablo Marti <pmargam@gmail.com>\n"
+"Language-Team: Spanish <es@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: mingus/templates/base.html:81
+msgid "About"
+msgstr "Acerca de"
+
+#: mingus/templates/base.html:91
+msgid "Elsewhere"
+msgstr "En otros sitios"
+
+#: mingus/templates/base.html:101
+msgid "Categories"
+msgstr "Categorías"
+
+#: mingus/templates/base.html:113
+#: mingus/templates/contact_form/contact_form_sent.html:11
+msgid "Recent Posts"
+msgstr "Envíos Recientes"
+
+#: mingus/templates/base.html:123
+msgid "Archive"
+msgstr "Archivo"
+
+#: mingus/templates/base.html:133
+msgid "BlogRoll"
+msgstr "BlogRoll"
+
+#: mingus/templates/base.html:142
+msgid "Popular Posts"
+msgstr "Envíos Recientes"
+
+#: mingus/templates/admin/base_site.html:4
+msgid "Mingus site admin"
+msgstr "Administración del sitio Mingus"
+
+#: mingus/templates/admin/base_site.html:16
+msgid "Mingus Blog Engine"
+msgstr "Motor del Blog Mingus"
+
+#: mingus/templates/admin/login.html:19
+msgid "Username:"
+msgstr "Usuario:"
+
+#: mingus/templates/admin/login.html:22
+msgid "Password:"
+msgstr "Contraseña:"
+
+#: mingus/templates/admin/login.html:27
+msgid "Log in"
+msgstr "Entrar"
+
+#: mingus/templates/blog/category_detail.html:5
+#: mingus/templates/blog/category_detail.html:11
+#: mingus/templates/blog/post_archive_month.html:9
+#: mingus/templates/blog/tag_detail.html:4
+msgid "Posts for"
+msgstr "Envíos para"
+
+#: mingus/templates/blog/category_list.html:9
+msgid "Posts categories"
+msgstr "Categorías de envíos"
+
+#: mingus/templates/blog/post_detail.html:68
+msgid "Twitter this"
+msgstr "Twittealo"
+
+#: mingus/templates/blog/post_detail.html:69
+msgid "Reddit this"
+msgstr "Redditealo"
+
+#: mingus/templates/blog/post_detail.html:70
+msgid "Add to Delicious"
+msgstr "Añade a Delicious"
+
+#: mingus/templates/blog/post_detail.html:71
+msgid "Subscribe RSS"
+msgstr "Suscribete al RSS"
+
+#: mingus/templates/blog/post_search.html:5
+#: mingus/templates/blog/post_search.html:10
+msgid "Search results for:"
+msgstr "Resultados de búsqueda para:"
+
+#: mingus/templates/blog/tag_detail.html:10
+msgid "Posts tagged:"
+msgstr "Envíos etiquetados:"
+
+#: mingus/templates/contact_form/contact_form.html:4
+msgid "Contact"
+msgstr "Contacto"
+
+#: mingus/templates/contact_form/contact_form.html:8
+#: mingus/templates/contact_form/contact_form_sent.html:6
+msgid "Contact me"
+msgstr "Contactame"
+
+#: mingus/templates/contact_form/contact_form.html:10
+msgid "Get in touch."
+msgstr ""
+
+#: mingus/templates/contact_form/contact_form.html:16
+msgid "Woops, looks like you forgot some information."
+msgstr "Oops, parece que has olvidado algún dato."
+
+#: mingus/templates/contact_form/contact_form_sent.html:8
+msgid ""
+"Thanks! I'll make sure to responsd shortly. In the meantime, check out some "
+"of my latest and greatest posts."
+msgstr ""
+"Gracias! Te responderé en breves. Mientras tanto, échale un vistazo "
+"a algunos de mis últimos envíos"
+
+#: mingus/templates/proxy/tag_detail.html:4
+msgid "Entries for"
+msgstr "Entradas para"
+
+#: mingus/templates/proxy/tag_detail.html:10
+msgid "Entries tagged:"
+msgstr "Entradas etiquetadas:"
+
+#: mingus/templates/quotes/quote_detail.html:8
+msgid "Quick fact, my favorite food is"
+msgstr "Dato rápido, mi comida favorita es"
+
+#: mingus/templates/quotes/quote_list.html:4
+#: mingus/templates/quotes/quote_list.html:8
+msgid "Quotes"
+msgstr "Citas"
+
+#: mingus/templates/quotes/quote_list.html:10
+msgid "A little side note, my favorite jazz album is"
+msgstr "Una notilla al margen, mi album favorito de jazz es"
+
+#: mingus/templatetags/tagging_related.py:21
+#, python-format
+msgid "tagged_get_related tag was given an invalid input: %s"
+msgstr "la etiqueta tagged_get_related ha recibido una entrada inválida: %s"
+
+#: mingus/templatetags/tagging_related.py:35
+#, python-format
+msgid "%s tag requires either five or seven arguments"
+msgstr "la etiqueta %s requiere cinco o siete argumentos"
+
+#: mingus/templatetags/tagging_related.py:37
+#, python-format
+msgid "second argument to %s tag must be 'in'"
+msgstr "el segundo argumento para la etiqueta %s debe de ser 'in'"
+
+#: mingus/templatetags/tagging_related.py:39
+#, python-format
+msgid "fourth argument to %s tag must be 'as'"
+msgstr "el cuarto argumento para la etiqueta %s debe de ser 'as'"
+
+#: mingus/templatetags/tagging_related.py:42
+#, python-format
+msgid "if given, fourth argument to %s tag must be 'with'"
+msgstr "si dado, el cuarto argumento para la etiqueta %s debe de ser 'with'"
+
+#: mingus/templatetags/tagging_related.py:49
+#, python-format
+msgid "%(tag)s tag's '%(option)s' option was not a valid integer: '%(value)s'"
+msgstr "la opción '%(option)s de la etiqueta %(tag)s no es un entero válido: '%(value)s'"
+
+#: mingus/templatetags/tagging_related.py:55
+#, python-format
+msgid "%(tag)s tag was given an invalid option: '%(option)s'"
+msgstr "la etiqueta %(tag)s ha recibido una opción inválida : '%(option)s'"
+
+#: mingus/templatetags/tagging_related.py:60
+#, python-format
+msgid "%(tag)s tag was given a badly formatted option: '%(option)s'"
+msgstr "la etiqueta %(tag)s ha recibido una opción mal formateada: '%(option)s'"
