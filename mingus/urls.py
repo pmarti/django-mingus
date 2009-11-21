@@ -6,9 +6,9 @@ from basic.blog.feeds import BlogPostsFeed, BlogPostsByCategory
 from basic.blog.sitemap import BlogSitemap
 from robots.views import rules_list
 
-from mingus.core.views import springsteen_results, springsteen_firehose, \
-                            home_list, springsteen_category, contact_form, \
-                            proxy_search
+from mingus.core.views import (springsteen_results, springsteen_firehose,
+                               home_list, springsteen_category, contact_form,
+                               proxy_search)
 from mingus.core.feeds import AllEntries
 
 
@@ -35,7 +35,7 @@ urlpatterns = patterns('',
     (r'^password_reset/done/$', 'django.contrib.auth.views.password_reset_done'),
     (r'^reset/(?P<uidb36>[0-9A-Za-z]+)-(?P<token>.+)/$', 'django.contrib.auth.views.password_reset_confirm'),
     (r'^reset/done/$', 'django.contrib.auth.views.password_reset_complete'),
-    (r'^admin/(.*)', admin.site.root),
+    (r'^admin/', include(admin.site.urls)),
 )
 
 urlpatterns += patterns('',
