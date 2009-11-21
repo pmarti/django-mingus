@@ -3,3 +3,4 @@
 *.db
 local_settings.py
 pip-log.txt
+mingus/media/static/fonts
