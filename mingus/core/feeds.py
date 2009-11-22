@@ -6,7 +6,7 @@ from django_proxy.models import Proxy
 
 class AllEntries(Feed):
     _settings = Settings.get_current()
-    title = '%s all entries feed' % _settings.site_name
+    title = _settings.site_name
     description = 'All entries published and updated on %s' % _settings.site_name
     author_name = _settings.author_name
     copyright = _settings.copyright
