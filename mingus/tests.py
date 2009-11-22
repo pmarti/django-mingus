@@ -82,21 +82,6 @@ class MingusClientTests(unittest.TestCase):
                     follow=True)
         self.failUnlessEqual(response.status_code, 400)
 
-    def test_QuoteList(self):
-        """Test quote list page renders."""
-        c = Client()
-        response = c.get('/quotes/')
-        self.failUnlessEqual(response.status_code, 200)
-
-    def test_QuoteDetail(self):
-        """Test quote list page renders."""
-        from quoteme.models import Quote
-        quote = Quote.objects.all()[0]
-
-        c = Client()
-        response = c.get(quote.get_absolute_url())
-        self.failUnlessEqual(response.status_code, 200)
-
     def test_RSS(self):
         """Test the latest posts feed displays."""
         c = Client()

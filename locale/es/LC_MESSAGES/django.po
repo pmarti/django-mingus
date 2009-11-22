@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-20 20:05+0100\n"
+"POT-Creation-Date: 2009-11-22 15:14+0100\n"
 "PO-Revision-Date: 2009-11-20 20:05+0100\n"
 "Last-Translator: Pablo Marti <pmargam@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: mingus/templates/base.html:81
+#: mingus/templates/base.html:82
 msgid "About"
 msgstr "Acerca de"
 
@@ -122,8 +122,8 @@ msgid ""
 "Thanks! I'll make sure to responsd shortly. In the meantime, check out some "
 "of my latest and greatest posts."
 msgstr ""
-"Gracias! Te responderé en breves. Mientras tanto, échale un vistazo "
-"a algunos de mis últimos envíos"
+"Gracias! Te responderé en breves. Mientras tanto, échale un vistazo a "
+"algunos de mis últimos envíos"
 
 #: mingus/templates/proxy/tag_detail.html:4
 msgid "Entries for"
@@ -132,19 +132,6 @@ msgstr "Entradas para"
 #: mingus/templates/proxy/tag_detail.html:10
 msgid "Entries tagged:"
 msgstr "Entradas etiquetadas:"
-
-#: mingus/templates/quotes/quote_detail.html:8
-msgid "Quick fact, my favorite food is"
-msgstr "Dato rápido, mi comida favorita es"
-
-#: mingus/templates/quotes/quote_list.html:4
-#: mingus/templates/quotes/quote_list.html:8
-msgid "Quotes"
-msgstr "Citas"
-
-#: mingus/templates/quotes/quote_list.html:10
-msgid "A little side note, my favorite jazz album is"
-msgstr "Una notilla al margen, mi album favorito de jazz es"
 
 #: mingus/templatetags/tagging_related.py:21
 #, python-format
@@ -174,7 +161,9 @@ msgstr "si dado, el cuarto argumento para la etiqueta %s debe de ser 'with'"
 #: mingus/templatetags/tagging_related.py:49
 #, python-format
 msgid "%(tag)s tag's '%(option)s' option was not a valid integer: '%(value)s'"
-msgstr "la opción '%(option)s de la etiqueta %(tag)s no es un entero válido: '%(value)s'"
+msgstr ""
+"la opción '%(option)s de la etiqueta %(tag)s no es un entero válido: '%"
+"(value)s'"
 
 #: mingus/templatetags/tagging_related.py:55
 #, python-format
@@ -184,4 +173,5 @@ msgstr "la etiqueta %(tag)s ha recibido una opción inválida : '%(option)s'"
 #: mingus/templatetags/tagging_related.py:60
 #, python-format
 msgid "%(tag)s tag was given a badly formatted option: '%(option)s'"
-msgstr "la etiqueta %(tag)s ha recibido una opción mal formateada: '%(option)s'"
+msgstr ""
+"la etiqueta %(tag)s ha recibido una opción mal formateada: '%(option)s'"

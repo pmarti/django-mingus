@@ -82,7 +82,6 @@ INSTALLED_APPS = (
   'contact_form',
   'honeypot',
   'sugar',
-  'quoteme',
   'mingus',
 )
 

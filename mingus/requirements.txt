@@ -30,4 +30,3 @@ http://www.aeracode.org/releases/south/south-0.6.1.tar.gz
 -e hg+https://bitbucket.org/ubernostrum/django-contact-form/#egg=contact_form
 -e git+git://github.com/sunlightlabs/django-honeypot.git#egg=honeypot
 -e git+git://github.com/montylounge/django-sugar.git#egg=sugar
--e git+git://github.com/montylounge/django-quoteme.git#egg=quoteme

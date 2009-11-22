@@ -24,7 +24,6 @@ http://www.aeracode.org/releases/south/south-0.6.1.tar.gz
 -e git://github.com/sunlightlabs/django-honeypot.git@825c1cd0fc99491d5f30b976f511a97b56ca9978#egg=django_honeypot8
 -e svn+http://django-navbar.googlecode.com/svn/trunk@13#egg=django_navbar-0.1.0-py2.5-dev
 -e git://github.com/brosner/django-oembed.git@0b09321a6042c490534e5940083136f712da57b0#egg=django_oembed
--e git://github.com/montylounge/django-quoteme.git@c9ed8992a8b3e2ae6d19392ce865e53cbb1088a5#egg=django_quoteme
 -e hg+https://bitbucket.org/jezdez/django-robots/@tip#egg=django_robots-tip
 -e git://github.com/montylounge/django-sugar.git@26bb6a8ab966707c53c817c9b16dbb0dee54d8e4#egg=django_sugar
 -e hg+https://bitbucket.org/kmike/django-view-cache-utils/@tip#egg=django_view_cache_utils-tip
