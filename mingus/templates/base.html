@@ -1,4 +1,4 @@
-{% load disqus_tags flatblock_tags cache navbar generic_content blog compress analytics elsewhere feeds i18n archive %}
+{% load disqus_tags flatblock_tags cache navbar generic_content blog compress analytics elsewhere feeds i18n archive tagging_tags %}
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
    "http://www.w3.org/TR/html4/strict.dtd">
@@ -98,16 +98,6 @@
       </ul>
       {% endcache %}
 
-      <h4>{% trans "Categories" %}</h4>
-      <ul>
-      {% cache 3600 "base.category_list" %}
-        {% get_blog_categories as category_list %}
-        {% for category in category_list %}
-        <li><a href="{% url basic.blog.views.category_detail category.slug %}" title="{{ category.title }}">{{ category.title }}</a></li>
-        {% endfor %}
-      </ul>
-      {% endcache %}
-
       {% cache 3600 "base.post_list" %}
       {% get_latest_posts 10 as post_list %}
       <h4>{% trans "Recent Posts" %}</h4>
@@ -146,6 +136,16 @@
       <li><a href="{{ item.get_absolute_url }}" title="{{ item.title }}">{{ item.title }}</a></li>
       {% endfor %}
       </ul>
+      {% endcache %}
+
+      <h4>{% trans "Tag Cloud" %}</h4>
+      {% cache 18000 "base.tag_cloud" %}
+      <div class="tag-cloud">
+        {% tag_cloud_for_model blog.Post as post_tags with steps=6 %}
+        {% for tag in post_tags %}
+        <a class="size-{{ tag.font_size }}" href="{% url blog_tag_detail tag|slugify %}" title="used {{ tag.count }} times">{{ tag }}</a>
+        {% endfor %}
+      </div>
       {% endcache %}
 
     </div>
