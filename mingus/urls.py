@@ -2,7 +2,7 @@ from django.conf.urls.defaults import url, include, patterns
 from django.contrib import admin
 from django.views.generic.simple import direct_to_template
 from django.conf import settings
-from basic.blog.feeds import BlogPostsFeed, BlogPostsByCategory
+from basic.blog.feeds import BlogPostsFeed, BlogPostsByTag
 from basic.blog.sitemap import BlogSitemap
 from robots.views import rules_list
 
@@ -17,11 +17,11 @@ admin.autodiscover()
 feeds = {
     'latest': BlogPostsFeed,
     'all': AllEntries,
-    'categories': BlogPostsByCategory,
+    'tag': BlogPostsByTag,
 }
 #ex: /feeds/latest/
 #ex: /feeds/all/
-#ex: /feeds/categories/django/
+#ex: /feeds/tag/django/
 
 sitemaps = {
     'posts': BlogSitemap,
