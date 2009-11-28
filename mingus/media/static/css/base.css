@@ -78,8 +78,8 @@ body {
 
 .filter-title{
     margin-bottom: 1.2em;
-    background-color: #ccc;
     padding: .3em;
+    font-size: 1.6em;
 }
 
 .post-img {
@@ -246,8 +246,6 @@ ul.navbar-one li
 pre{ color: #333940; }
 
 #footer p{ font-size: .8em; }
-
-.filter-title{ font-size: 1.4em; }
 
 .list-tease { font-size: .9em; }
 
