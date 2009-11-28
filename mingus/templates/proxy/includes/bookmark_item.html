@@ -1,6 +1,6 @@
 
 <div class="bookmark clearfix">
-  <div class="date">{{ object.pub_date|date:"M d" }}</div>
+  <div class="date">{{ object.pub_date|date:"M"|upper }} <big>{{ object.pub_date|date:"d" }}</big></div>
   <h2><a href="{{ object.content_object.get_absolute_url }}">{{ object.title }}</a></h2>
     <div class="body">
     {{ object.description|safe }}
