@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import url, include, patterns
+from django.conf.urls.defaults import *
 from django.contrib import admin
 from django.views.generic.simple import direct_to_template
 from django.conf import settings
