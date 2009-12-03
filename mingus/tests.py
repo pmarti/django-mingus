@@ -97,11 +97,11 @@ class MingusClientTests(unittest.TestCase):
         response = c.get('/api/springsteen/posts/')
         self.failUnlessEqual(response.status_code, 200)
 
-    def test_SpringsteenFeed_Posts_ByCategory(self):
+    def test_SpringsteenFeed_Posts_ByTag(self):
         """
-        Test the latest Post By Category springsteen feed for findjango
+        Test the latest Post By Tag springsteen feed for findjango
         integration displays.
         """
         c = Client()
-        response = c.get('/api/springsteen/category/django/')
+        response = c.get('/api/springsteen/tag/django/')
         self.failUnlessEqual(response.status_code, 200)

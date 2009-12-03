@@ -12,7 +12,7 @@ from view_cache_utils import cache_page_with_prefix
 from contact_form.views import contact_form as django_contact_form
 from contact_form.forms import ContactForm
 from honeypot.decorators import check_honeypot
-from tagging.models import Tag
+from tagging.models import Tag, TaggedItem
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 import re
@@ -104,6 +104,23 @@ def springsteen_category(request, slug):
     results = [ post_result_item(item) for item in posts ]
     response_dict = { 'total_results': category.post_set.published().count(),
                     'results': results, }
+    return HttpResponse(simplejson.dumps(response_dict),
+                        mimetype='application/javascript')
+
+
+def springsteen_tag(request, slug):
+    """
+    Creates the django-springsteen compliant JSON results for only for
+    findjago integration
+
+    Results:
+        Published Post objects by tag
+    """
+    tag = Tag.objects.get(name__exact=slug)
+    posts = TaggedItem.objects.get_by_model(Post, tag)[:50]
+    results = map(post_result_item, posts)
+    response_dict = {'total_results': len(results),
+                    'results': results}
     return HttpResponse(simplejson.dumps(response_dict),
                         mimetype='application/javascript')
 
