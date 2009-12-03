@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-11-22 15:14+0100\n"
+"POT-Creation-Date: 2009-12-03 19:49+0100\n"
 "PO-Revision-Date: 2009-11-20 20:05+0100\n"
 "Last-Translator: Pablo Marti <pmargam@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -23,26 +23,26 @@ msgstr "Acerca de"
 msgid "Elsewhere"
 msgstr "En otros sitios"
 
-#: mingus/templates/base.html:101
-msgid "Categories"
-msgstr "Categorías"
-
-#: mingus/templates/base.html:113
+#: mingus/templates/base.html:103
 #: mingus/templates/contact_form/contact_form_sent.html:11
 msgid "Recent Posts"
 msgstr "Envíos Recientes"
 
-#: mingus/templates/base.html:123
+#: mingus/templates/base.html:113
 msgid "Archive"
 msgstr "Archivo"
 
-#: mingus/templates/base.html:133
+#: mingus/templates/base.html:123
 msgid "BlogRoll"
 msgstr "BlogRoll"
 
-#: mingus/templates/base.html:142
+#: mingus/templates/base.html:132
 msgid "Popular Posts"
 msgstr "Envíos Recientes"
+
+#: mingus/templates/base.html:141
+msgid "Tag Cloud"
+msgstr "Nube de Etiquetas"
 
 #: mingus/templates/admin/base_site.html:4
 msgid "Mingus site admin"
@@ -110,12 +110,20 @@ msgid "Contact me"
 msgstr "Contactame"
 
 #: mingus/templates/contact_form/contact_form.html:10
-msgid "Get in touch."
+msgid ""
+"Enter your name, email address and message, and click 'Send'. I won't share "
+"or sell your email address, it's required so that I can get back to you"
 msgstr ""
+"Introduce tu nombre, email y mensaje, y haz click en 'Enviar'. No compartiré "
+"o venderé tu dirección de correo, es necesaria para que pueda contestarte"
 
 #: mingus/templates/contact_form/contact_form.html:16
 msgid "Woops, looks like you forgot some information."
 msgstr "Oops, parece que has olvidado algún dato."
+
+#: mingus/templates/contact_form/contact_form.html:43
+msgid "Send"
+msgstr "Enviar"
 
 #: mingus/templates/contact_form/contact_form_sent.html:8
 msgid ""
