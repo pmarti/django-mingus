@@ -26,25 +26,25 @@ TEMPLATE_DIRS = (
 )
 
 MIDDLEWARE_CLASSES = (
-'django.middleware.common.CommonMiddleware',
-'django.contrib.sessions.middleware.SessionMiddleware',
-'django.contrib.auth.middleware.AuthenticationMiddleware',
-'django.middleware.doc.XViewMiddleware',
-'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
-'sugar.middleware.debugging.UserBasedExceptionMiddleware',
-'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
-'djangodblog.DBLogMiddleware',
-'debug_toolbar.middleware.DebugToolbarMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.middleware.doc.XViewMiddleware',
+    'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
+    'sugar.middleware.debugging.UserBasedExceptionMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'djangodblog.DBLogMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-"django.core.context_processors.auth",
-"django.core.context_processors.debug",
-"django.core.context_processors.i18n",
-"django.core.context_processors.media",
-"basic.blog.context_processors.blog_settings",
-"mingus.core.context_processors.site_info",
-"navbar.context_processors.navbars",
+    "django.core.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "basic.blog.context_processors.blog_settings",
+    "mingus.core.context_processors.site_info",
+    "navbar.context_processors.navbars",
 )
 
 INSTALLED_APPS = (
