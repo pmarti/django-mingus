@@ -2,14 +2,14 @@ from django.conf.urls.defaults import *
 from django.contrib import admin
 from django.views.generic.simple import direct_to_template
 from django.conf import settings
-from basic.blog.feeds import BlogPostsFeed, BlogPostsByTag
+from basic.blog.feeds import BlogPostsFeed
 from basic.blog.sitemap import BlogSitemap
 from robots.views import rules_list
 
 from mingus.core.views import (springsteen_results, springsteen_firehose,
                                home_list, contact_form, springsteen_tag,
                                proxy_search)
-from mingus.core.feeds import AllEntries
+from mingus.core.feeds import AllEntries, BlogPostsByTag
 
 
 admin.autodiscover()

@@ -1,7 +1,9 @@
-from django.contrib.syndication.feeds import Feed
+from django.core.exceptions import ObjectDoesNotExist
+from django.contrib.syndication.feeds import Feed, FeedDoesNotExist
 
-from basic.blog.models import Settings
+from basic.blog.models import Settings, Post
 from django_proxy.models import Proxy
+from tagging.models import Tag, TaggedItem
 
 
 class AllEntries(Feed):
@@ -22,3 +24,24 @@ class AllEntries(Feed):
 
     def item_categories(self, item):
         return item.tags.replace(',', '').split()
+
+
+class BlogPostsByTag(Feed):
+    _settings = Settings.get_current()
+    title = _settings.site_name
+    description = 'Tagged posts on %s' % _settings.site_name
+    author_name = _settings.author_name
+    copyright = _settings.copyright
+
+    def get_object(self, bits):
+        if len(bits) != 1:
+            raise ObjectDoesNotExist
+        return Tag.objects.get(name__exact=bits[0])
+
+    def link(self, obj):
+        if not obj:
+            raise FeedDoesNotExist
+        return '/tags/%s' % obj.name
+
+    def items(self, obj):
+        return TaggedItem.objects.get_by_model(Post, obj)[:10]
