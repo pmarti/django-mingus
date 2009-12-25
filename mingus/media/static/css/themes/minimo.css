@@ -27,3 +27,40 @@ pre{ background-color: #dac694;}
 ul.recent-posts li { color: #633709;}
 
 .post li{ color: #fff;}
+
+.tag-cloud a { text-decoration: none; }
+.tag-cloud a.size-1 { font-size: 10px; }
+.tag-cloud a.size-2 { font-size: 10px; }
+.tag-cloud a.size-3 { font-size: 18px; }
+.tag-cloud a.size-4 { font-size: 22px; }
+.tag-cloud a.size-5 { font-size: 26px; }
+.tag-cloud a.size-6 { font-size: 30px; }
+
+#contact-form {
+  margin: 20px 0;
+}
+
+#contact-form label {
+  display: block;
+  float: left;
+  margin-bottom: 10px;
+}
+
+#contact-form input {
+  float: right;
+}
+
+#contact-form textarea, #contact-form input[type="text"] {
+  background-color: #DAC694;
+  border: 1px solid transparent;
+  color: #1C0B03;
+  float: right;
+  margin-bottom: 10px;
+  padding: 0 5px;
+  width: 370px;
+  font-size: 18px;
+}
+
+#contact-form input[type="text"] {
+  height: 20px;
+}

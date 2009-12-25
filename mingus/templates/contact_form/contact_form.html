@@ -9,38 +9,41 @@
 
 <p>{% trans "Enter your name, email address and message, and click 'Send'. I won't share or sell your email address, it's required so that I can get back to you" %}</p>
 
-<form method="POST" action=".">
+<form id="contact-form" method="POST" action=".">
 
-  {% if form.errors %}
+{% if form.errors %}
   <div id="form-error">
     <p>{% trans "Woops, looks like you forgot some information." %}</p>
 
     <ul>
     {% for field in form %}
-    {% if field.errors %}<li>{{ field.label }} - {{ field.errors|striptags }}</li>{% endif %}
+      {% if field.errors %}
+      <li>{{ field.label }} - {{ field.errors|striptags }}</li>
+      {% endif %}
     {% endfor %}
     </ul>
   </div>
-  {% endif %}
+{% endif %}
 
-<p>
-<label for="form.name.label">{{ form.name.label }}</label>
-{{ form.name }}
-</p>
+<fieldset>
+  <label for="id_name">{{ form.name.label }}</label>
+  {{ form.name }}
+</fieldset>
 
-<p>
-<label for="form.email.label">{{ form.email.label }}</label>
-{{ form.email }}
-</p>
+<fieldset>
+  <label for="id_email">{{ form.email.label }}</label>
+  {{ form.email }}
+</fieldset>
 
-<p>
-<label for="form.body.label">{{ form.body.label }}</label>
-{{ form.body }}
-</p>
+<fieldset>
+  <label for="id_body">{{ form.body.label }}</label>
+  {{ form.body }}
+</fieldset>
 
-{% render_honeypot_field %}
-
-<input type="submit" name="submit" value="{% trans "Send" %}">
+<fieldset>
+  {% render_honeypot_field %}
+  <input type="submit" name="submit" value="{% trans "Submit" %}">
+</fieldset>
 </form>
 
 {% endblock %}
