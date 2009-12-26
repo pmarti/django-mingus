@@ -12,7 +12,7 @@ body {
 }
 .post .teaser{ border-bottom: solid 1.0em #633709;}
 
-h4 { color: #a85a00;}
+h2, h4 { color: #a85a00;}
 #right-rail p, #right-rail ul{ color: #dac694;}
 
 a:link, a:visited {
@@ -44,6 +44,7 @@ ul.recent-posts li { color: #633709;}
   display: block;
   float: left;
   margin-bottom: 10px;
+  color: #a85a00;
 }
 
 #contact-form input {
