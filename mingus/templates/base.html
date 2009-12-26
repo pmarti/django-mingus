@@ -85,9 +85,9 @@
         <li><a href="{{ BLOG_SETTINGS.rss_url }}" title"Subscribe via RSS">RSS</a></li>
       </ul>
 
+      {% cache 3600 "base.profiles" %}
       <h4>{% trans "Elsewhere" %}</h4>
       <ul>
-        {% cache 3600 "base.profiles" %}
         {% get_elsewhere_profiles as profiles %}
         {% for item in profiles %}
         <li><a href="{{ item.url }}" rel="me" title="{{ item.name }}">{{ item.name }}</a></li>
@@ -135,8 +135,8 @@
     </ul>
     {% endcache %}
 
-    <h4>{% trans "Tag Cloud" %}</h4>
     {% cache 18000 "base.tag_cloud" %}
+    <h4>{% trans "Tag Cloud" %}</h4>
     <div class="tag-cloud">
         {% tag_cloud_for_model blog.Post as post_tags with steps=6 %}
         {% for tag in post_tags %}
