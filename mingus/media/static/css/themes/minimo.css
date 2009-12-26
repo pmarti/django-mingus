@@ -28,6 +28,8 @@ ul.recent-posts li { color: #633709;}
 
 .post li{ color: #fff;}
 
+.subscribe li { list-style-type: none; margin-left: 0.2em;}
+
 .tag-cloud a { text-decoration: none; }
 .tag-cloud a.size-1 { font-size: 10px; }
 .tag-cloud a.size-2 { font-size: 10px; }
