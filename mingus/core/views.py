@@ -150,10 +150,6 @@ def home_list(request, page=0, template_name='proxy/proxy_list.html', **kwargs):
     )
 
 
-def oops(request):
-    """An view that exists soley to provide an example of using django-db-log."""
-    foo = 1/0
-
 def tag_detail(request, slug, template_name='proxy/tag_detail.html', **kwargs):
     """ Display objects for all content types supported: Post."""
     tag = get_object_or_404(Tag, name__iexact=slug)

@@ -39,7 +39,6 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns('',
-    url(r'^oops/$', 'mingus.core.views.oops', name='raise_exception'),
     url(r'robots.txt$', rules_list, name='robots_rule_list'),
     (r'^sitemap.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
     (r'^feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': feeds}),
