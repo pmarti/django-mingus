@@ -27,12 +27,12 @@ setup(
         'Programming Language :: Python',
         'Framework :: Django',
     ],
-    package_data = {
-            'mingus': [
-                'media/static/css/*.css',
-                'media/static/imgs/*.png',
-                'media/static/js/*.js',
-            ]
-        },
+    package_data={
+        'mingus': [
+            'media/static/css/*.css',
+            'media/static/imgs/*.png',
+            'media/static/js/*.js',
+        ]
+    },
     zip_safe=False, # required to convince setuptools/easy_install to unzip the package data
 )
