@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-26 11:34+0100\n"
+"POT-Creation-Date: 2009-12-26 12:46+0100\n"
 "PO-Revision-Date: 2009-11-20 20:05+0100\n"
 "Last-Translator: Pablo Marti <pmargam@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -19,28 +19,28 @@ msgstr ""
 msgid "About"
 msgstr "Acerca de"
 
-#: mingus/templates/base.html:88
+#: mingus/templates/base.html:91
 msgid "Elsewhere"
 msgstr "En otros sitios"
 
-#: mingus/templates/base.html:100
-#: mingus/templates/contact_form/contact_form_sent.html:11
+#: mingus/templates/base.html:103
+#: mingus/templates/contact_form/contact_form_sent.html:12
 msgid "Recent Posts"
 msgstr "Envíos Recientes"
 
-#: mingus/templates/base.html:110
+#: mingus/templates/base.html:115
 msgid "Archive"
 msgstr "Archivo"
 
-#: mingus/templates/base.html:120
+#: mingus/templates/base.html:127
 msgid "BlogRoll"
 msgstr "BlogRoll"
 
-#: mingus/templates/base.html:129
+#: mingus/templates/base.html:139
 msgid "Popular Posts"
 msgstr "Envíos Recientes"
 
-#: mingus/templates/base.html:138
+#: mingus/templates/base.html:151
 msgid "Tag Cloud"
 msgstr "Nube de Etiquetas"
 
@@ -66,14 +66,25 @@ msgstr "Entrar"
 
 #: mingus/templates/blog/category_detail.html:5
 #: mingus/templates/blog/category_detail.html:11
+#: mingus/templates/blog/post_archive_day.html:9
 #: mingus/templates/blog/post_archive_month.html:9
+#: mingus/templates/blog/post_archive_year.html:9
 #: mingus/templates/blog/tag_detail.html:4
 msgid "Posts for"
 msgstr "Envíos para"
 
+#: mingus/templates/blog/category_list.html:4
 #: mingus/templates/blog/category_list.html:9
-msgid "Posts categories"
+msgid "Post categories"
 msgstr "Categorías de envíos"
+
+#: mingus/templates/blog/post_detail.html:46
+msgid "Tags:"
+msgstr "Etiquetas:"
+
+#: mingus/templates/blog/post_detail.html:59
+msgid "Related posts:"
+msgstr "Envíos relacionados:"
 
 #: mingus/templates/blog/post_search.html:5
 #: mingus/templates/blog/post_search.html:10
@@ -88,12 +99,12 @@ msgstr "Envíos etiquetados:"
 msgid "Contact"
 msgstr "Contacto"
 
-#: mingus/templates/contact_form/contact_form.html:8
-#: mingus/templates/contact_form/contact_form_sent.html:6
+#: mingus/templates/contact_form/contact_form.html:9
+#: mingus/templates/contact_form/contact_form_sent.html:7
 msgid "Contact me"
 msgstr "Contactame"
 
-#: mingus/templates/contact_form/contact_form.html:10
+#: mingus/templates/contact_form/contact_form.html:11
 msgid ""
 "Enter your name, email address and message, and click 'Send'. I won't share "
 "or sell your email address, it's required so that I can get back to you"
@@ -101,21 +112,29 @@ msgstr ""
 "Introduce tu nombre, email y mensaje, y haz click en 'Enviar'. No compartiré "
 "o venderé tu dirección de correo, es necesaria para que pueda contestarte"
 
-#: mingus/templates/contact_form/contact_form.html:16
+#: mingus/templates/contact_form/contact_form.html:17
 msgid "Woops, looks like you forgot some information."
 msgstr "Oops, parece que has olvidado algún dato."
 
-#: mingus/templates/contact_form/contact_form.html:45
+#: mingus/templates/contact_form/contact_form.html:46
 msgid "Submit"
 msgstr "Enviar"
 
-#: mingus/templates/contact_form/contact_form_sent.html:8
+#: mingus/templates/contact_form/contact_form_sent.html:9
 msgid ""
 "Thanks! I'll make sure to responsd shortly. In the meantime, check out some "
 "of my latest and greatest posts."
 msgstr ""
 "Gracias! Te responderé en breves. Mientras tanto, échale un vistazo a "
 "algunos de mis últimos envíos"
+
+#: mingus/templates/proxy/proxy_search.html:13
+msgid "Search"
+msgstr "Buscar"
+
+#: mingus/templates/proxy/proxy_search.html:27
+msgid "No results found"
+msgstr "No se encontró ningún resultado"
 
 #: mingus/templates/proxy/tag_detail.html:4
 msgid "Entries for"

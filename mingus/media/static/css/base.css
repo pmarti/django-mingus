@@ -290,3 +290,15 @@ h2 a:hover { font-weight: 400; color: #3c94bc;}
   display: none;
   margin-left: -1000;
 }
+
+.inline li {
+  display: inline;
+}
+
+.inline li:after {
+  content: ",";
+}
+
+.inline li:last-child:after {
+  content: "";
+}
