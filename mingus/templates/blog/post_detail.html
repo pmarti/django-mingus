@@ -56,12 +56,12 @@
   {% tagged_get_related object in blog.Post as post_list with num=3 %}
   {% if post_list %}
   <div class="related">
-    <p><strong>{% trans "Related posts:" %}</strong></p>
-    <ol class="post inline">
+    <strong>{% trans "Related posts:" %}</strong>
+    <ul class="post inline">
       {% for post in post_list %}
       <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
       {% endfor %}
-    </ol>
+    </ul>
   </div>
   {% endif %}
   {% endcache %}

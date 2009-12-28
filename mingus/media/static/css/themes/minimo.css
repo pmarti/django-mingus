@@ -34,8 +34,7 @@ ul.recent-posts li { color: #633709;}
 
 .subscribe li { list-style-type: none; margin-left: 0.2em;}
 
-.tags, .tags ul { display: inline; }
-.tags ul { margin-left: 0.4em; }
+.tags ul, .related ul { display: inline; margin-left: 0.4em; }
 
 .tag-cloud a { text-decoration: none; }
 .tag-cloud a.size-1 { font-size: 0.8em; }
