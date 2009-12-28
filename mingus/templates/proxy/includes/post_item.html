@@ -1,7 +1,7 @@
 {% load blog tagging_tags inlines oembed_tags pygment_tags %}
 
 <div class="post clearfix">
-  <div class="date">{{ object.pub_date|date:"M"|upper }} <big>{{ object.pub_date|date:"d" }}</big></div>
+  <div class="date">{{ object.pub_date|date:"M <\b\i\g>d</\b\i\g>"|safe }}</div>
   {% with object.content_object as post %}
     <h2><a href="{{ object.content_object.get_absolute_url }}">{{ object.title }}</a></h2>
     {% if post.tease %}
