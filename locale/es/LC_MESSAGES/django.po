@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-26 19:50+0100\n"
+"POT-Creation-Date: 2009-12-28 16:20+0100\n"
 "PO-Revision-Date: 2009-11-20 20:05+0100\n"
 "Last-Translator: Pablo Marti <pmargam@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -85,6 +85,10 @@ msgstr "Etiquetas:"
 #: mingus/templates/blog/post_detail.html:59
 msgid "Related posts:"
 msgstr "Envíos relacionados:"
+
+#: mingus/templates/blog/post_detail.html:70
+msgid "Spread the word:"
+msgstr "Difunde la palabra:"
 
 #: mingus/templates/blog/post_search.html:5
 #: mingus/templates/blog/post_search.html:10

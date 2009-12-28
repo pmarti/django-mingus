@@ -67,11 +67,11 @@
   {% endcache %}
 
   <div class="subscribe clearfix">
-    <ul>
-      <li><a href="http://www.reddit.com/submit?title={{ object.title }}&url=http://{{ BLOG_SETTINGS.site.domain }}{{ object.get_absolute_url }}" target="_blank"><img width="16" height="16" src="{{ STATIC_URL }}imgs/icons/reddit.png"/></a></li>
-      <li><a href="http://twitter.com/?status=reading: {{ object.title }} - {{ SITE_URL }}{{ object.get_absolute_url }}" target="_blank"><img width="16" height="16" src="{{ STATIC_URL }}imgs/icons/twitter.png"/></a></li>
-      <li><a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;"><img width="16" height="16" src="{{ STATIC_URL }}imgs/icons/delicious.png"/></a></li>
-    </ul>
+    <strong>{% trans "Spread the word:" %}</strong>
+    <a href="http://www.reddit.com/submit?title={{ object.title }}&url=http://{{ BLOG_SETTINGS.site.domain }}{{ object.get_absolute_url }}" target="_blank"><img width="16" height="16" src="{{ STATIC_URL }}imgs/icons/reddit.png"/></a>
+    <a href="http://twitter.com/?status=reading: {{ object.title }} - {{ SITE_URL }}{{ object.get_absolute_url }}" target="_blank"><img width="16" height="16" src="{{ STATIC_URL }}imgs/icons/twitter.png"/></a>
+    <a href="http://delicious.com/save" onclick="window.open('http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title), 'delicious','toolbar=no,width=550,height=550'); return false;"><img width="16" height="16" src="{{ STATIC_URL }}imgs/icons/delicious.png"/></a>
+    <a href="http://www.facebook.com/sharer.php?u=http://{{ BLOG_SETTINGS.site.domain}}{{ object.get_absolute_url }}&t={{ object.title}}" target="_blank"><img width="16" height="16" src="{{ STATIC_URL }}imgs/icons/facebook.png"/></a>
   </div>
   <!-- post -->
 
