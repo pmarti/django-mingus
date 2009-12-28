@@ -39,6 +39,10 @@ ul.recent-posts li { color: #633709;}
 
 .post li{ color: #fff;}
 
+.post_list form.search {
+  margin-bottom: 2em;
+}
+
 .tags ul, .related ul, .subscribe ul { display: inline; margin-left: 0.4em; }
 .subscribe a img { margin: 0 3px; }
 
