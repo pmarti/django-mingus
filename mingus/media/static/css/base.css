@@ -108,7 +108,7 @@ body {
 
 ul.recent-posts li, .post li
 {
-    list-style: disc;
+    list-style: none;
     left-margin: 1.2em;
     list-style-position: inside;
     color: #333940;
