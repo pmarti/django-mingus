@@ -85,7 +85,7 @@ def springsteen_firehose(request):
             }
 
     posts = Proxy.objects.published().order_by('-pub_date')[:50]
-    results = [ result_item(item) for item in posts ]
+    results = map(post_result_item, posts)
     response_dict = { 'total_results': Proxy.objects.published().count(),
                     'results': results, }
     return HttpResponse(simplejson.dumps(response_dict), mimetype='application/javascript')
@@ -101,7 +101,7 @@ def springsteen_category(request, slug):
 
     category = get_object_or_404(Category, slug__iexact=slug)
     posts = category.post_set.published()[:50]
-    results = [ post_result_item(item) for item in posts ]
+    results = map(post_result_item, posts)
     response_dict = { 'total_results': category.post_set.published().count(),
                     'results': results, }
     return HttpResponse(simplejson.dumps(response_dict),
