@@ -14,9 +14,16 @@ body {
     margin: 0.3em 0  0 -6.0em;
     width: 3.8em;
 }
+
 .post .teaser{ border-bottom: solid 1.0em #633709;}
 
 h2, h4 { color: #a85a00;}
+
+.section h1, .section h2, .section h3 { color: #a85a00; }
+.section h1 { font-size: 1.4em; }
+.section h2 { font-size: 1.2em; }
+.section h3 { font-size: 1.1em; }
+
 #right-rail p, #right-rail ul{ color: #dac694;}
 
 a:link, a:visited {

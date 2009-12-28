@@ -213,7 +213,7 @@ h2 { margin: 0.25em 0 .2em; font-size: 1.8em; letter-spacing: -0.025em; line-hei
 
 h3 { font-size: 1em; margin-bottom: 0.25em; }
 
-h4 { font-size: 0.875em; }
+h4 { font-size: 0.95em; }
 
 p, li { font-size: 1em; line-height: 1.4em;}
 
@@ -254,7 +254,7 @@ a:link, a:visited {
 
 a:hover { color: #3c94bc; }
 
-h2 a:link, h2 a:visited{ font-weight: 400; color: #333940;}
+h2 a:link, h2 a:visited { font-weight: 400; color: #333940;}
 
 h2 a:hover { font-weight: 400; color: #3c94bc;}
 
