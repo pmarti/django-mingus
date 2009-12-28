@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<h1 class="filter-title">{% trans "Posts for" %} {{ day|date:"F jS, Y" }}</h1>
+<h2 class="filter-title">{% trans "Posts for" %} {{ day|date:"F jS, Y" }}</h2>
 
 <div class="post_list">
 {% for post in object_list %}
