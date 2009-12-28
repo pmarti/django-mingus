@@ -1,4 +1,4 @@
-{% load blog tagging_tags inlines oembed_tags pygment_tags %}
+{% load blog tagging_tags inlines oembed_tags %}
 
 <div class="post clearfix">
   <div class="date">{{ object.pub_date|date:"M <\b\i\g>d</\b\i\g>"|safe }}</div>
@@ -9,7 +9,7 @@
     {% endif %}
     <div class="body">
     {% oembed %}
-      {{ object.description|render_inlines|pygmentize|safe }}
+      {{ object.description|render_inlines|safe }}
     {% endoembed %}
   </div>
   {% endwith %}

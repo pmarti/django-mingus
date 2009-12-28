@@ -295,3 +295,9 @@ h2 a:hover { font-weight: 400; color: #3c94bc;}
 .inline li:last-child:after {
   content: "";
 }
+
+div.highlight {
+  margin-left: 2em ;
+  margin-right: 2em ;
+  background-color: #eeeeee
+}
