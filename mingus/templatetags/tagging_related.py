@@ -63,4 +63,3 @@ def tagged_get_related(parser, token):
             })
 
     return TaggedGetRelatedNode(bits[1], bits[3], bits[5], **kwargs)
-

@@ -20,7 +20,7 @@ from django.db.models import Q
 
 def page_key_prefix(request):
     """Used by cache_page_with_prefix to create a cache key prefix."""
-    return request.GET.get('page','')
+    return request.GET.get('page', '')
 
 
 def build_url(domainname):
@@ -45,15 +45,15 @@ def springsteen_results(request):
         Published Post objects.
     """
 
-    results = [ post_result_item(item) for item in Post.objects.published()[:50] ]
-    response_dict = { 'total_results': Post.objects.published().count(),
-                    'results': results, }
-    return HttpResponse(simplejson.dumps(response_dict), mimetype='application/javascript')
+    results = map(post_result_item, Post.objects.published()[:50])
+    response_dict = {'total_results': Post.objects.published().count(),
+                    'results': results}
+    return HttpResponse(simplejson.dumps(response_dict),
+                        mimetype='application/javascript')
 
 
 def server_error(request, template_name='500.html'):
     """Handles displaying 500 server error page along with application MEDIA."""
-
     t = loader.get_template(template_name)
     blog_settings = Settings.get_current()
 
@@ -67,12 +67,9 @@ def springsteen_firehose(request):
     """
     Generates django-springsteen compliant JSON results of proxy models for
     findjango integration.
-
     """
-
     def result_item(proxy):
         """Generates the item result object."""
-
         if proxy.content_type.name == 'bookmark':
             url = proxy.content_object.get_absolute_url()
         else:
@@ -82,13 +79,14 @@ def springsteen_firehose(request):
             'title': proxy.title,
             'url': url,
             'text': proxy.description,
-            }
+        }
 
     posts = Proxy.objects.published().order_by('-pub_date')[:50]
     results = map(post_result_item, posts)
-    response_dict = { 'total_results': Proxy.objects.published().count(),
-                    'results': results, }
-    return HttpResponse(simplejson.dumps(response_dict), mimetype='application/javascript')
+    response_dict = {'total_results': Proxy.objects.published().count(),
+                    'results': results}
+    return HttpResponse(simplejson.dumps(response_dict),
+                        mimetype='application/javascript')
 
 def springsteen_category(request, slug):
     """
@@ -98,12 +96,11 @@ def springsteen_category(request, slug):
     Results:
         Published Post objects by category.
     """
-
     category = get_object_or_404(Category, slug__iexact=slug)
     posts = category.post_set.published()[:50]
     results = map(post_result_item, posts)
-    response_dict = { 'total_results': category.post_set.published().count(),
-                    'results': results, }
+    response_dict = {'total_results': category.post_set.published().count(),
+                    'results': results}
     return HttpResponse(simplejson.dumps(response_dict),
                         mimetype='application/javascript')
 
@@ -142,12 +139,11 @@ def home_list(request, page=0, template_name='proxy/proxy_list.html', **kwargs):
 
     return list_detail.object_list(
         request,
-        queryset = posts,
-        paginate_by = pagesize,
-        page = page,
-        template_name = template_name,
-        **kwargs
-    )
+        queryset=posts,
+        paginate_by=pagesize,
+        page=page,
+        template_name=template_name,
+        **kwargs)
 
 
 def tag_detail(request, slug, template_name='proxy/tag_detail.html', **kwargs):
@@ -156,9 +152,9 @@ def tag_detail(request, slug, template_name='proxy/tag_detail.html', **kwargs):
 
     return list_detail.object_list(
         request,
-        queryset = Proxy.objects.published().filter(tags__icontains=tag.name).order_by('-pub_date'),
-        extra_context = {'tag': tag},
-        template_name = template_name,
+        queryset=Proxy.objects.published().filter(tags__icontains=tag.name).order_by('-pub_date'),
+        extra_context={'tag': tag},
+        template_name=template_name,
         **kwargs)
 
 
@@ -178,7 +174,7 @@ def contact_form(request, form_class=ContactForm,
     decorator you see being applied is used to protect your app from spam.
     """
     return django_contact_form(request, form_class=form_class,
-                 template_name=template_name)
+                               template_name=template_name)
 
 
 # Stop Words courtesy of http://www.dcs.gla.ac.uk/idom/ir_resources/linguistic_utils/stop_words
@@ -222,10 +218,11 @@ def proxy_search(request, template_name='proxy/proxy_search.html'):
         search_term = '%s' % request.GET['q']
         cleaned_search_term = stop_word_list.sub('', search_term)
         cleaned_search_term = cleaned_search_term.strip()
-        if len(cleaned_search_term) != 0:
+        if len(cleaned_search_term):
             post_list = Proxy.objects.filter(Q(title__icontains=cleaned_search_term) | Q(tags__icontains=cleaned_search_term) | Q(description__icontains=cleaned_search_term)).order_by('-pub_date')
-            context = {'object_list': post_list, 'search_term':search_term}
+            context = {'object_list': post_list, 'search_term': search_term}
         else:
             message = 'Search term was too vague. Please try again.'
-            context = {'message':message}
-    return render_to_response(template_name, context, context_instance=RequestContext(request))
+            context = {'message': message}
+    return render_to_response(template_name, context,
+                              context_instance=RequestContext(request))
