@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block body_class %}blog{% endblock %}
 
 {% block content %}
@@ -7,9 +8,9 @@
     <div class="date"><big>404</big></div>
     <h2>Page not found</h2>
     <div class="body">
-        <p>The resource you were looking for cannot be found. We recommend that
+        <p>{% trans "The resource you were looking for cannot be found. We recommend that
         you start again from the <a href="/">main page</a> or use the search
-        box at the top</p>
+        box at the top" %}</p>
     </div>
 </div>
 

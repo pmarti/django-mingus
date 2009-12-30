@@ -5,6 +5,7 @@ from basic.blog.models import Post, Category
 from django.conf import settings
 from django import http
 from django.template import loader, Context
+from django.utils.translation import ugettext as _
 from django_proxy.models import Proxy
 from django.views.generic import list_detail
 from basic.blog.models import Settings
@@ -222,7 +223,7 @@ def proxy_search(request, template_name='proxy/proxy_search.html'):
             post_list = Proxy.objects.filter(Q(title__icontains=cleaned_search_term) | Q(tags__icontains=cleaned_search_term) | Q(description__icontains=cleaned_search_term)).order_by('-pub_date')
             context = {'object_list': post_list, 'search_term': search_term}
         else:
-            message = 'Search term was too vague. Please try again.'
+            message = _('Search term was too vague. Please try again.')
             context = {'message': message}
     return render_to_response(template_name, context,
                               context_instance=RequestContext(request))

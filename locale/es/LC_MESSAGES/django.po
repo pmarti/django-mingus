@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-28 16:20+0100\n"
+"POT-Creation-Date: 2009-12-30 13:48+0100\n"
 "PO-Revision-Date: 2009-11-20 20:05+0100\n"
 "Last-Translator: Pablo Marti <pmargam@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -15,32 +15,63 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: mingus/templates/base.html:79
+#: mingus/settings.py:26
+msgid "Spanish"
+msgstr "Español"
+
+#: mingus/settings.py:27
+msgid "English"
+msgstr "Inglés"
+
+#: mingus/core/feeds.py:13
+#, python-format
+msgid "All entries published and updated on %s"
+msgstr "Todas las entradas publicadas y actualizadas en %s"
+
+#: mingus/core/feeds.py:33
+#, python-format
+msgid "Tagged posts on %s"
+msgstr "Envíos etiquetados en %s"
+
+#: mingus/core/views.py:226
+msgid "Search term was too vague. Please try again."
+msgstr ""
+"El término de búsqueda fué demasiado vago. Por favor inténtelo de nuevo"
+
+#: mingus/templates/500.html:9
+msgid "Oh well this is embarrassing"
+msgstr "Oh bueno, vaya vergüenza"
+
+#: mingus/templates/base.html:88
 msgid "About"
 msgstr "Acerca de"
 
 #: mingus/templates/base.html:91
+msgid "Follow"
+msgstr "Seguir"
+
+#: mingus/templates/base.html:100
 msgid "Elsewhere"
 msgstr "En otros sitios"
 
-#: mingus/templates/base.html:103
+#: mingus/templates/base.html:112
 #: mingus/templates/contact_form/contact_form_sent.html:12
 msgid "Recent Posts"
 msgstr "Envíos Recientes"
 
-#: mingus/templates/base.html:115
+#: mingus/templates/base.html:124
 msgid "Archive"
 msgstr "Archivo"
 
-#: mingus/templates/base.html:127
+#: mingus/templates/base.html:136
 msgid "BlogRoll"
 msgstr "BlogRoll"
 
-#: mingus/templates/base.html:139
+#: mingus/templates/base.html:148
 msgid "Popular Posts"
 msgstr "Envíos Recientes"
 
-#: mingus/templates/base.html:151
+#: mingus/templates/base.html:160
 msgid "Tag Cloud"
 msgstr "Nube de Etiquetas"
 
@@ -59,6 +90,10 @@ msgstr "Usuario:"
 #: mingus/templates/admin/login.html:22
 msgid "Password:"
 msgstr "Contraseña:"
+
+#: mingus/templates/admin/login.html:24
+msgid "Forgot password?"
+msgstr "¿Olvidó la contraseña?"
 
 #: mingus/templates/admin/login.html:27
 msgid "Log in"
@@ -90,8 +125,8 @@ msgstr "Envíos relacionados:"
 msgid "Spread the word:"
 msgstr "Difunde la palabra:"
 
-#: mingus/templates/blog/post_search.html:5
-#: mingus/templates/blog/post_search.html:10
+#: mingus/templates/blog/post_search.html:4
+#: mingus/templates/blog/post_search.html:8
 msgid "Search results for:"
 msgstr "Resultados de búsqueda para:"
 

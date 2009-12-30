@@ -1,14 +1,15 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block body_class %}blog{% endblock %}
 
 {% block content %}
 
 <div class="post clearfix">
     <div class="date"><big>500</big></div>
-	<h2>Oh well this is embarrassing</h2>
+    <h2>{% trans "Oh well this is embarrassing" %}</h2>
     <div class="body">
-      <p>It seems that something went horribly wrong and your request could not
-      be completed. We recommend you to try again later.</p>
+      <p>{% trans "It seems that something went horribly wrong and your request could not
+      be completed. We recommend you to try again later." %}</p>
 	</div>
 </div>
 

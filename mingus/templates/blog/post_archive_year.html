@@ -1,5 +1,5 @@
 {% extends "blog/base_blog.html" %}
-{% load cache i18n archive %}
+{% load i18n archive %}
 
 {% block body_class %}{{ block.super }} category_detail{% endblock %}
 {% block body_id %}category_{{ category.id }}{% endblock %}

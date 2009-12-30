@@ -1,4 +1,5 @@
 from django.core.exceptions import ObjectDoesNotExist
+from django.utils.translation import ugettext as _
 from django.contrib.syndication.feeds import Feed, FeedDoesNotExist
 
 from basic.blog.models import Settings, Post
@@ -9,7 +10,7 @@ from tagging.models import Tag, TaggedItem
 class AllEntries(Feed):
     _settings = Settings.get_current()
     title = _settings.site_name
-    description = 'All entries published and updated on %s' % _settings.site_name
+    description = _('All entries published and updated on %s') % _settings.site_name
     author_name = _settings.author_name
     copyright = _settings.copyright
 
@@ -29,7 +30,7 @@ class AllEntries(Feed):
 class BlogPostsByTag(Feed):
     _settings = Settings.get_current()
     title = _settings.site_name
-    description = 'Tagged posts on %s' % _settings.site_name
+    description = _('Tagged posts on %s') % _settings.site_name
     author_name = _settings.author_name
     copyright = _settings.copyright
 
