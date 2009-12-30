@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-30 13:48+0100\n"
+"POT-Creation-Date: 2009-12-30 15:40+0100\n"
 "PO-Revision-Date: 2009-11-20 20:05+0100\n"
 "Last-Translator: Pablo Marti <pmargam@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -15,11 +15,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: mingus/settings.py:26
+#: mingus/settings.py:27
 msgid "Spanish"
 msgstr "Español"
 
-#: mingus/settings.py:27
+#: mingus/settings.py:28
 msgid "English"
 msgstr "Inglés"
 
@@ -72,8 +72,8 @@ msgid "Popular Posts"
 msgstr "Envíos Recientes"
 
 #: mingus/templates/base.html:160
-msgid "Tag Cloud"
-msgstr "Nube de Etiquetas"
+msgid "Tags"
+msgstr "Etiquetas"
 
 #: mingus/templates/admin/base_site.html:4
 msgid "Mingus site admin"
