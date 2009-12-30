@@ -1,4 +1,4 @@
-{% load disqus_tags flatblock_tags cache navbar generic_content blog analytics elsewhere feeds i18n archive tagging_tags %}
+{% load compress disqus_tags flatblock_tags cache navbar generic_content blog analytics elsewhere feeds i18n archive tagging_tags %}
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
    "http://www.w3.org/TR/html4/strict.dtd">
@@ -23,13 +23,15 @@
     <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} all posts feed" href="/feeds/latest/">
     {% endblock %}
 
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/960.css" type="text/css" media="all" charset="utf-8">
     {% comment %}
     <link rel="stylesheet" href="{{ STATIC_URL }}css/pygments.css" type="text/css" media="all" charset="utf-8">
     {% endcomment %}
     <link rel="stylesheet" href="{{ STATIC_URL }}css/fonts.css" type="text/css" media="all" charset="utf-8">
+    {% compress css %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/960.css" type="text/css" media="all" charset="utf-8">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" type="text/css" media="all" charset="utf-8">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/themes/minimo.css" type="text/css" media="all" charset="utf-8">
+    {% endcompress %}
 
     <!--[if IE 6]>
     <script src="{{ STATIC_URL }}js/DD_belatedPNG_0.0.7a-min.js"></script>
