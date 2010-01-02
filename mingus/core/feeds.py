@@ -8,11 +8,25 @@ from tagging.models import Tag, TaggedItem
 
 
 class AllEntries(Feed):
-    _settings = Settings.get_current()
-    title = _settings.site_name
-    description = _('All entries published and updated on %s') % _settings.site_name
-    author_name = _settings.author_name
-    copyright = _settings.copyright
+    _settings = None
+
+    @property
+    def settings(self):
+        if self._settings is None:
+            self._settings = Settings.get_current()
+        return self._settings
+
+    def title(self):
+        return self.settings.site_name
+
+    def description(self):
+        return _('All entries published and updated on %s') % self.settings.site_name
+
+    def author_name(self):
+        return self.settings.author_name
+
+    def copyright(self):
+        return self.settings.copyright
 
     def link(self):
         return 'http://%s' % self._settings.site.domain
