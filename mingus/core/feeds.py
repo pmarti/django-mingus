@@ -42,9 +42,7 @@ class AllEntries(Feed):
 
 
 class BlogPostsByTag(Feed):
-    _settings = Settings.get_current()
-    author_name = _settings.author_name
-    copyright = _settings.copyright
+    _settings = None
 
     @property
     def settings(self):
