@@ -69,7 +69,7 @@ msgstr "BlogRoll"
 
 #: mingus/templates/base.html:148
 msgid "Popular Posts"
-msgstr "Envíos Recientes"
+msgstr "Envíos Populares"
 
 #: mingus/templates/base.html:160
 msgid "Tags"
