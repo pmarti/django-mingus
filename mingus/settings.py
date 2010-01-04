@@ -2,8 +2,6 @@
 import os
 from os.path import join, dirname
 
-_ = lambda s: s
-
 PROJECT_ROOT = dirname(__file__)
 MEDIA_ROOT = join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
