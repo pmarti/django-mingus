@@ -14,18 +14,12 @@ ADMIN_MEDIA_PREFIX = '/admin_media/'
 SITE_ID = 1
 ROOT_URLCONF = 'mingus.urls'
 TIME_ZONE = 'America/New_York'
-LANGUAGE_CODE = 'es'
 SECRET_KEY = '+bq@o(jph^-*sfj4j%xukecxb0jae9lci&ysy=609hj@(l$47c'
 USE_I18N = False
 HONEYPOT_FIELD_NAME = 'fonzie_kungfu'
 
 MANAGERS = (
     ('fooper', 'your@emailaddress'),
-)
-
-LANGUAGES = (
-    ('es', _('Spanish')),
-    ('en', _('English')),
 )
 
 TEMPLATE_DIRS = (
