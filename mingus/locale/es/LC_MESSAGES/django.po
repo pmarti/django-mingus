@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: 0.8.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-30 15:40+0100\n"
+"POT-Creation-Date: 2010-01-05 10:01+0100\n"
 "PO-Revision-Date: 2009-11-20 20:05+0100\n"
 "Last-Translator: Pablo Marti <pmargam@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -15,135 +15,139 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: mingus/settings.py:27
-msgid "Spanish"
-msgstr "Español"
-
-#: mingus/settings.py:28
+#: local_settings.py:27
 msgid "English"
 msgstr "Inglés"
 
-#: mingus/core/feeds.py:13
+#: local_settings.py:28
+msgid "Spanish"
+msgstr "Español"
+
+#: core/feeds.py:23
 #, python-format
 msgid "All entries published and updated on %s"
 msgstr "Todas las entradas publicadas y actualizadas en %s"
 
-#: mingus/core/feeds.py:33
+#: core/feeds.py:57
 #, python-format
 msgid "Tagged posts on %s"
-msgstr "Envíos etiquetados en %s"
+msgstr "Entradas etiquetadas en %s"
 
-#: mingus/core/views.py:226
+#: core/views.py:226
 msgid "Search term was too vague. Please try again."
 msgstr ""
 "El término de búsqueda fué demasiado vago. Por favor inténtelo de nuevo"
 
-#: mingus/templates/500.html:9
+#: templates/500.html:9
 msgid "Oh well this is embarrassing"
-msgstr "Oh bueno, vaya vergüenza"
+msgstr "Bueno, ¡qué vergüenza!"
 
-#: mingus/templates/base.html:88
+#: templates/base.html:88
 msgid "About"
 msgstr "Acerca de"
 
-#: mingus/templates/base.html:91
+#: templates/base.html:91
 msgid "Follow"
 msgstr "Seguir"
 
-#: mingus/templates/base.html:100
+#: templates/base.html:100
 msgid "Elsewhere"
 msgstr "En otros sitios"
 
-#: mingus/templates/base.html:112
-#: mingus/templates/contact_form/contact_form_sent.html:12
+#: templates/base.html:112 templates/contact_form/contact_form_sent.html:12
 msgid "Recent Posts"
-msgstr "Envíos Recientes"
+msgstr "Entradas Recientes"
 
-#: mingus/templates/base.html:124
+#: templates/base.html:124
 msgid "Archive"
 msgstr "Archivo"
 
-#: mingus/templates/base.html:136
+#: templates/base.html:136
 msgid "BlogRoll"
 msgstr "BlogRoll"
 
-#: mingus/templates/base.html:148
+#: templates/base.html:148
 msgid "Popular Posts"
-msgstr "Envíos Populares"
+msgstr "Entradas Populares"
 
-#: mingus/templates/base.html:160
+#: templates/base.html:160
 msgid "Tags"
 msgstr "Etiquetas"
 
-#: mingus/templates/admin/base_site.html:4
+#: templates/admin/base_site.html:4
 msgid "Mingus site admin"
 msgstr "Administración del sitio Mingus"
 
-#: mingus/templates/admin/base_site.html:16
+#: templates/admin/base_site.html:16
 msgid "Mingus Blog Engine"
 msgstr "Motor del Blog Mingus"
 
-#: mingus/templates/admin/login.html:19
+#: templates/admin/login.html:19
 msgid "Username:"
 msgstr "Usuario:"
 
-#: mingus/templates/admin/login.html:22
+#: templates/admin/login.html:22
 msgid "Password:"
 msgstr "Contraseña:"
 
-#: mingus/templates/admin/login.html:24
+#: templates/admin/login.html:24
 msgid "Forgot password?"
 msgstr "¿Olvidó la contraseña?"
 
-#: mingus/templates/admin/login.html:27
+#: templates/admin/login.html:27
 msgid "Log in"
 msgstr "Entrar"
 
-#: mingus/templates/blog/category_detail.html:5
-#: mingus/templates/blog/category_detail.html:11
-#: mingus/templates/blog/post_archive_day.html:9
-#: mingus/templates/blog/post_archive_month.html:9
-#: mingus/templates/blog/post_archive_year.html:9
-#: mingus/templates/blog/tag_detail.html:4
+#: templates/blog/category_detail.html:5
+#: templates/blog/category_detail.html:11
+#: templates/blog/post_archive_day.html:9
+#: templates/blog/post_archive_month.html:9
+#: templates/blog/post_archive_year.html:9 templates/blog/tag_detail.html:4
 msgid "Posts for"
-msgstr "Envíos para"
+msgstr "Entradas para"
 
-#: mingus/templates/blog/category_list.html:4
-#: mingus/templates/blog/category_list.html:9
+#: templates/blog/category_list.html:4 templates/blog/category_list.html:9
 msgid "Post categories"
-msgstr "Categorías de envíos"
+msgstr "Categorías de entradas"
 
-#: mingus/templates/blog/post_detail.html:46
+#: templates/blog/post_detail.html:46
 msgid "Tags:"
 msgstr "Etiquetas:"
 
-#: mingus/templates/blog/post_detail.html:59
+#: templates/blog/post_detail.html:59
 msgid "Related posts:"
-msgstr "Envíos relacionados:"
+msgstr "Entradas relacionadas:"
 
-#: mingus/templates/blog/post_detail.html:70
+#: templates/blog/post_detail.html:70
 msgid "Spread the word:"
 msgstr "Difunde la palabra:"
 
-#: mingus/templates/blog/post_search.html:4
-#: mingus/templates/blog/post_search.html:8
+#: templates/blog/post_search.html:4 templates/blog/post_search.html.py:8
 msgid "Search results for:"
 msgstr "Resultados de búsqueda para:"
 
-#: mingus/templates/blog/tag_detail.html:10
+#: templates/blog/tag_detail.html:10
 msgid "Posts tagged:"
-msgstr "Envíos etiquetados:"
+msgstr "Entradas etiquetadas:"
 
-#: mingus/templates/contact_form/contact_form.html:4
+#: templates/blog/includes/pagination.html:5
+msgid "Older posts &raquo;"
+msgstr "Entradas anteriores &raquo;"
+
+#: templates/blog/includes/pagination.html:10
+msgid "&laquo; Newer posts"
+msgstr "&laquo; Entradas posteriores"
+
+#: templates/contact_form/contact_form.html:4
 msgid "Contact"
 msgstr "Contacto"
 
-#: mingus/templates/contact_form/contact_form.html:9
-#: mingus/templates/contact_form/contact_form_sent.html:7
+#: templates/contact_form/contact_form.html:9
+#: templates/contact_form/contact_form_sent.html:7
 msgid "Contact me"
-msgstr "Contactame"
+msgstr "Contáctame"
 
-#: mingus/templates/contact_form/contact_form.html:11
+#: templates/contact_form/contact_form.html:11
 msgid ""
 "Enter your name, email address and message, and click 'Send'. I won't share "
 "or sell your email address, it's required so that I can get back to you."
@@ -151,76 +155,76 @@ msgstr ""
 "Introduce tu nombre, email y mensaje, y haz click en 'Enviar'. No compartiré "
 "o venderé tu dirección de correo, es necesaria para que pueda contestarte."
 
-#: mingus/templates/contact_form/contact_form.html:17
+#: templates/contact_form/contact_form.html:17
 msgid "Woops, looks like you forgot some information."
-msgstr "Oops, parece que has olvidado algún dato."
+msgstr "Epa, parece que has olvidado algún dato."
 
-#: mingus/templates/contact_form/contact_form.html:46
+#: templates/contact_form/contact_form.html:46
 msgid "Submit"
 msgstr "Enviar"
 
-#: mingus/templates/contact_form/contact_form_sent.html:9
+#: templates/contact_form/contact_form_sent.html:9
 msgid ""
 "Thanks! I'll make sure to respond shortly. In the meantime, check out some "
 "of my latest and greatest posts."
 msgstr ""
 "Gracias! Te responderé en breves. Mientras tanto, échale un vistazo a "
-"algunos de mis últimos envíos"
+"algunos de mis últimas entradas"
 
-#: mingus/templates/proxy/proxy_search.html:13
+#: templates/proxy/proxy_search.html:13
 msgid "Search"
 msgstr "Buscar"
 
-#: mingus/templates/proxy/proxy_search.html:27
+#: templates/proxy/proxy_search.html:27
 msgid "No results found"
 msgstr "No se encontró ningún resultado"
 
-#: mingus/templates/proxy/tag_detail.html:4
+#: templates/proxy/tag_detail.html:4
 msgid "Entries for"
 msgstr "Entradas para"
 
-#: mingus/templates/proxy/tag_detail.html:10
+#: templates/proxy/tag_detail.html:10
 msgid "Entries tagged:"
 msgstr "Entradas etiquetadas:"
 
-#: mingus/templatetags/tagging_related.py:21
+#: templatetags/tagging_related.py:21
 #, python-format
 msgid "tagged_get_related tag was given an invalid input: %s"
 msgstr "la etiqueta tagged_get_related ha recibido una entrada inválida: %s"
 
-#: mingus/templatetags/tagging_related.py:35
+#: templatetags/tagging_related.py:35
 #, python-format
 msgid "%s tag requires either five or seven arguments"
 msgstr "la etiqueta %s requiere cinco o siete argumentos"
 
-#: mingus/templatetags/tagging_related.py:37
+#: templatetags/tagging_related.py:37
 #, python-format
 msgid "second argument to %s tag must be 'in'"
 msgstr "el segundo argumento para la etiqueta %s debe de ser 'in'"
 
-#: mingus/templatetags/tagging_related.py:39
+#: templatetags/tagging_related.py:39
 #, python-format
 msgid "fourth argument to %s tag must be 'as'"
 msgstr "el cuarto argumento para la etiqueta %s debe de ser 'as'"
 
-#: mingus/templatetags/tagging_related.py:42
+#: templatetags/tagging_related.py:42
 #, python-format
 msgid "if given, fourth argument to %s tag must be 'with'"
 msgstr "si dado, el cuarto argumento para la etiqueta %s debe de ser 'with'"
 
-#: mingus/templatetags/tagging_related.py:49
+#: templatetags/tagging_related.py:49
 #, python-format
 msgid "%(tag)s tag's '%(option)s' option was not a valid integer: '%(value)s'"
 msgstr ""
 "la opción '%(option)s de la etiqueta %(tag)s no es un entero válido: '%"
 "(value)s'"
 
-#: mingus/templatetags/tagging_related.py:55
+#: templatetags/tagging_related.py:55
 #, python-format
 msgid "%(tag)s tag was given an invalid option: '%(option)s'"
 msgstr "la etiqueta %(tag)s ha recibido una opción inválida : '%(option)s'"
 
-#: mingus/templatetags/tagging_related.py:60
+#: templatetags/tagging_related.py:60
 #, python-format
 msgid "%(tag)s tag was given a badly formatted option: '%(option)s'"
 msgstr ""
