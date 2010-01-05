@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.8.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-05 10:01+0100\n"
+"POT-Creation-Date: 2010-01-05 10:37+0100\n"
 "PO-Revision-Date: 2009-11-20 20:05+0100\n"
 "Last-Translator: Pablo Marti <pmargam@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -37,6 +37,14 @@ msgstr "Entradas etiquetadas en %s"
 msgid "Search term was too vague. Please try again."
 msgstr ""
 "El término de búsqueda fué demasiado vago. Por favor inténtelo de nuevo"
+
+#: templates/404.html:12
+msgid ""
+" The resource you were looking for cannot be found. We recommend that you "
+"start again from the main page or use the search box at the top."
+msgstr ""
+" El recurso que estaba buscando no puede ser encontrado. Le recomendamos que "
+"empiece de nuevo desde la página principal o use la caja de búsqueda arriba."
 
 #: templates/500.html:9
 msgid "Oh well this is embarrassing"
