@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.8.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-05 10:37+0100\n"
+"POT-Creation-Date: 2010-01-05 10:44+0100\n"
 "PO-Revision-Date: 2009-11-20 20:05+0100\n"
 "Last-Translator: Pablo Marti <pmargam@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -37,6 +37,10 @@ msgstr "Entradas etiquetadas en %s"
 msgid "Search term was too vague. Please try again."
 msgstr ""
 "El término de búsqueda fué demasiado vago. Por favor inténtelo de nuevo"
+
+#: templates/404.html:9
+msgid "Page not found"
+msgstr "Página no encontrada"
 
 #: templates/404.html:12
 msgid ""
