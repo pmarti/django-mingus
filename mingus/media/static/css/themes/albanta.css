@@ -69,7 +69,7 @@ pre { background-color: #dac694;}
   display: block;
   float: left;
   margin-bottom: 10px;
-  color: #a85a00;
+  color: #d9b166;
 }
 
 #contact-form input {
@@ -83,10 +83,16 @@ pre { background-color: #dac694;}
   float: right;
   margin-bottom: 10px;
   padding: 0 5px;
-  width: 370px;
-  font-size: 18px;
+  width: 350px;
+  font-size: 1.3em;
 }
 
 #contact-form input[type="text"] {
   height: 20px;
 }
+
+.crew-member { margin: 0 auto; }
+
+.crew-member .picture { float: left; width: 55%; }
+.crew-member .legend { float: right; width: 45%; font-size: 1.1em; }
+.crew-member .bio { margin-left: 0.2em; font-size: 0.9em; }
