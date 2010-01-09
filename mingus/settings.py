@@ -37,7 +37,6 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.middleware.doc.XViewMiddleware',
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
     'sugar.middleware.debugging.UserBasedExceptionMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
