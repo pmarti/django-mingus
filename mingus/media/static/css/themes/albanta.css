@@ -1,0 +1,98 @@
+body {
+    color: #cddec6;
+    background: #1e4f6a;
+}
+
+#header {
+    background: url("../../imgs/header_bg.png") no-repeat;
+    height: 279px;
+    width: 960px;
+}
+
+#logo h1 {
+    margin-top: 100px;
+    margin-left: 470px;
+}
+
+#logo h1 a { color: #fff; font-size: 1.5em; }
+
+.post .date, .bookmark .date {
+    float: left;
+    -moz-border-radius: 1.5em 0;
+    -webkit-border-radius: 1.5em 0;
+    -border-radius: 1.5em 0;
+    text-transform: uppercase;
+    padding: .3em .4em .3em 1.2em;
+    background: #c96c29;
+    background: #4daaab;
+    margin: 0.3em 0 0 -6.0em;
+    width: 3.8em;
+}
+
+.post .teaser{ border-bottom: solid 1.0em #93a189;}
+
+h1, h2, h3, h4 { color: #d9b166; }
+
+.section h1 { font-size: 1.4em; }
+.section h2 { font-size: 1.2em; }
+.section h3 { font-size: 1.1em; }
+
+a:link, a:visited, h2 a:link, h2 a:visited {
+    color: #93a189;
+}
+a:hover, h2 a:hover { color: #cddec6; }
+
+pre { background-color: #dac694;}
+
+.post li { color: #fff; }
+
+.post_list form.search {
+  margin-bottom: 2em;
+}
+
+.tags ul, .related ul, .subscribe ul { display: inline; margin-left: 0.4em; }
+.subscribe a img { margin: 0 3px; }
+
+.tag-cloud a { text-decoration: none; }
+.tag-cloud a.size-1 { font-size: 0.8em; }
+.tag-cloud a.size-2 { font-size: 1.0em; }
+.tag-cloud a.size-3 { font-size: 1.2em; }
+.tag-cloud a.size-4 { font-size: 1.4em; }
+.tag-cloud a.size-5 { font-size: 1.6em; }
+.tag-cloud a.size-6 { font-size: 1.8em; }
+
+#contact-form {
+  margin: 20px 0;
+}
+
+#contact-form label {
+  display: block;
+  float: left;
+  margin-bottom: 10px;
+  color: #d9b166;
+}
+
+#contact-form input {
+  float: right;
+}
+
+#contact-form textarea, #contact-form input[type="text"] {
+  background-color: #DAC694;
+  border: 1px solid transparent;
+  color: #1C0B03;
+  float: right;
+  margin-bottom: 10px;
+  padding: 0 5px;
+  width: 350px;
+  font-size: 1.3em;
+}
+
+#contact-form input[type="text"] {
+  height: 20px;
+}
+
+.crew-member { margin: 0 auto; }
+
+.crew-member .picture { float: left; width: 55%; }
+.crew-member .legend { float: right; width: 45%; font-size: 1.1em; }
+.crew-member .bio { margin-left: 0.2em; font-size: 0.9em; }

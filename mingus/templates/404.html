@@ -6,11 +6,11 @@
 
 <div class="post clearfix">
     <div class="date"><big>404</big></div>
-    <h2>Page not found</h2>
+    <h2>{% trans "Page not found" %}</h2>
     <div class="body">
-        <p>{% trans "The resource you were looking for cannot be found. We recommend that
-        you start again from the <a href="/">main page</a> or use the search
-        box at the top" %}</p>
+    <p>
+      {% blocktrans %} The resource you were looking for cannot be found. We recommend that you start again from the main page or use the search box at the top.{% endblocktrans %}
+    </p>
     </div>
 </div>
 

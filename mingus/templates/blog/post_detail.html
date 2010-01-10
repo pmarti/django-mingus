@@ -28,7 +28,7 @@
 {% block content %}
 
   <div class="post clearfix">
-    <div class="date">{{ object.publish|date:"M d" }}</div>
+    <div class="date">{{ object.publish|date:"M <\b\i\g>d</\b\i\g>"|safe }}</div>
     <h2>{{ object.title }}</h2>
     {% if object.tease %}
       <p class="teaser">{{ object.tease|safe }}</p>
