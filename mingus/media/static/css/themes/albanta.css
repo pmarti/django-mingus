@@ -16,6 +16,8 @@ body {
 
 #logo h1 a { color: #fff; font-size: 1.5em; }
 
+ul.navbar-one li a { color: #cddec6; font-weight: bold; }
+
 .post .date, .bookmark .date {
     float: left;
     -moz-border-radius: 1.5em 0;

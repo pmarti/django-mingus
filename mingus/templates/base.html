@@ -1,4 +1,4 @@
-{% load compress disqus_tags flatblock_tags cache navbar generic_content blog analytics elsewhere feeds i18n archive tagging_tags %}
+{% load compress flatblock_tags cache navbar generic_content blog analytics elsewhere feeds i18n archive tagging_tags %}
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
    "http://www.w3.org/TR/html4/strict.dtd">
@@ -23,6 +23,10 @@
     <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} all posts feed" href="/feeds/latest/">
     {% endblock %}
 
+    {% cache 7200 "base.analytics" %}
+    {% compress js %}{% analytics %}{% endcompress %}
+    {% endcache %}
+
     {% comment %}
     <link rel="stylesheet" href="{{ STATIC_URL }}css/pygments.css" type="text/css" media="all" charset="utf-8">
     {% endcomment %}
@@ -33,14 +37,6 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/themes/minimo.css" type="text/css" media="all" charset="utf-8">
     {% endcompress %}
 
-    <!--[if IE 6]>
-    <script src="{{ STATIC_URL }}js/DD_belatedPNG_0.0.7a-min.js"></script>
-    <script>
-      DD_belatedPNG.fix('#bleeder, .logo');
-    </script>
-    <![endif]-->
-
-    {% disqus_dev %}
     {% block extra_head %}{% endblock %}
   </head>
 
@@ -53,7 +49,6 @@
   <div id="header" class="clearfix">
     <div id="logo">
       <h1><a href="/" title="{{ BLOG_SETTINGS.site_name }}">{{ BLOG_SETTINGS.site_name }}</a></h1>
-      <!-- a href="{{ SITE_URL }}" title="Monty Lounge Industries Blog"><img class="logo" src="{{ STATIC_URL }}imgs/logo-blog-color-trans2.png" alt="Monty Lounge Industries"></a -->
     </div>
     <!-- /logo -->
 
@@ -183,11 +178,6 @@
     </p>
   </div>
   <!-- /footer -->
-
-  <!-- google analytics -->
-  {% cache 7200 "base.analytics" %}
-  {% analytics %}
-  {% endcache %}
 
 </body>
 </html>

@@ -25,12 +25,12 @@ TEMPLATE_DIRS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.middleware.http.ConditionalGetMiddleware',
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
-    'sugar.middleware.debugging.UserBasedExceptionMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'djangodblog.DBLogMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
