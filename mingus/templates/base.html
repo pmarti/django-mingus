@@ -15,17 +15,13 @@
     {% endblock %}
 
     <meta name="copyright" content="{{ BLOG_SETTINGS.copyright }}">
-    <link rel="shortcut icon" href="{{ STATIC_URL }}imgs/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 
     {% block rss %}
     <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} main rss feed" href="{{ BLOG_SETTINGS.rss_url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} all entries feed" href="/feeds/all/">
     <link rel="alternate" type="application/rss+xml" title="{{ BLOG_SETTINGS.site_name }} all posts feed" href="/feeds/latest/">
     {% endblock %}
-
-    {% cache 7200 "base.analytics" %}
-    {% compress js %}{% analytics %}{% endcompress %}
-    {% endcache %}
 
     {% comment %}
     <link rel="stylesheet" href="{{ STATIC_URL }}css/pygments.css" type="text/css" media="all" charset="utf-8">
@@ -36,6 +32,10 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css" type="text/css" media="all" charset="utf-8">
     <link rel="stylesheet" href="{{ STATIC_URL }}css/themes/minimo.css" type="text/css" media="all" charset="utf-8">
     {% endcompress %}
+
+    {% cache 7200 "base.analytics" %}
+    {% compress js %}{% analytics %}{% endcompress %}
+    {% endcache %}
 
     {% block extra_head %}{% endblock %}
   </head>
