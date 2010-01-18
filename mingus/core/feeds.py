@@ -1,8 +1,8 @@
 from django.core.exceptions import ObjectDoesNotExist
-from django.utils.translation import ugettext as _
 from django.contrib.syndication.feeds import Feed, FeedDoesNotExist
+from django.utils.translation import ugettext as _
 
-from basic.blog.models import Settings, Post
+from basic.blog.models import Settings
 from django_proxy.models import Proxy
 from tagging.models import Tag, TaggedItem
 
@@ -17,7 +17,7 @@ class AllEntries(Feed):
         return self._settings
 
     def title(self):
-        return self.settings.site_name
+        return _('%s all entries feed') % self.settings.site_name
 
     def description(self):
         return _('All entries published and updated on %s') % self.settings.site_name
@@ -41,8 +41,7 @@ class AllEntries(Feed):
         return item.tags.replace(',', '').split()
 
 
-class BlogPostsByTag(Feed):
-    _settings = None
+class ByTag(AllEntries):
 
     @property
     def settings(self):
@@ -51,16 +50,7 @@ class BlogPostsByTag(Feed):
         return self._settings
 
     def title(self):
-        return self.settings.site_name
-
-    def description(self):
-        return _('Tagged posts on %s') % self.settings.site_name
-
-    def author_name(self):
-        return self.settings.author_name
-
-    def copyright(self):
-        return self.settings.copyright
+        return _('%s all entries feed') % self.settings.site_name
 
     def get_object(self, bits):
         if len(bits) != 1:
@@ -72,5 +62,13 @@ class BlogPostsByTag(Feed):
             raise FeedDoesNotExist
         return '/tags/%s' % obj.name
 
+    def description(self, obj):
+        return _("Posts recently tagged as %s") % obj.name
+
+    def item_link(self, item):
+        return item.content_object.get_absolute_url()
+
     def items(self, obj):
-        return TaggedItem.objects.get_by_model(Post, obj)[:10]
+        return Proxy.objects.published().filter(
+            tags__icontains=obj.name
+        ).order_by('-pub_date')[:10]

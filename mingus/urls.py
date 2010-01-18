@@ -1,23 +1,20 @@
 from django.conf.urls.defaults import *
 from django.contrib import admin
 from django.views.generic.simple import direct_to_template
-from django.conf import settings
 from basic.blog.feeds import BlogPostsFeed
 from basic.blog.sitemap import BlogSitemap
-from robots.views import rules_list
-
 from mingus.core.views import (springsteen_results, springsteen_firehose,
-                               home_list, contact_form, springsteen_tag,
+                               home_list, springsteen_tag, contact_form,
                                proxy_search)
-from mingus.core.feeds import AllEntries, BlogPostsByTag
-
+from robots.views import rules_list
+from mingus.core.feeds import AllEntries, ByTag
 
 admin.autodiscover()
 
 feeds = {
     'latest': BlogPostsFeed,
     'all': AllEntries,
-    'tag': BlogPostsByTag,
+    'tags': ByTag,
 }
 #ex: /feeds/latest/
 #ex: /feeds/all/
@@ -39,6 +36,7 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += patterns('',
+    (r'^tinymce/', include('tinymce.urls')),
     url(r'robots.txt$', rules_list, name='robots_rule_list'),
     (r'^sitemap.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
     (r'^feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': feeds}),
@@ -64,10 +62,8 @@ urlpatterns += patterns('',
     (r'', include('basic.blog.urls')),
 )
 
-if settings.LOCAL_DEV:
-    urlpatterns += patterns('django.views.static',
-        (r'^%s(?P<path>.*)' % settings.STATIC_URL[1:], 'serve',
-         {'document_root': settings.STATIC_ROOT}),
-        (r'^%s(?P<path>.*)' % settings.MEDIA_URL[1:], 'serve',
-         {'document_root': settings.MEDIA_ROOT}),
+from django.conf import settings
+if settings.DEBUG:
+    urlpatterns += patterns('',
+        (r'', include('staticfiles.urls')),
     )

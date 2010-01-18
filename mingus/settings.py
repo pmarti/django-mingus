@@ -1,13 +1,18 @@
 # -*- coding: utf-8 -*-
 import os
-from os.path import join, dirname
 
-PROJECT_ROOT = dirname(__file__)
-MEDIA_ROOT = join(PROJECT_ROOT, 'media')
+
+PROJECT_ROOT = os.path.dirname(__file__)
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
 MEDIA_URL = '/media/'
-STATIC_ROOT = join(MEDIA_ROOT, 'static')
-STATIC_URL = '/media/static/'
-ADMIN_MEDIA_PREFIX = '/admin_media/'
+ADMIN_MEDIA_PREFIX = '/static/admin/'
+
+#staticfiles app values
+STATIC_URL = '/media/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'media')
+STATICFILES_DIRS = (
+    os.path.join(PROJECT_ROOT, 'media', 'mingus'),
+)
 
 SITE_ID = 1
 ROOT_URLCONF = 'mingus.urls'
@@ -27,12 +32,14 @@ TEMPLATE_DIRS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.locale.LocaleMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.middleware.http.ConditionalGetMiddleware',
+    'django.middleware.doc.XViewMiddleware',
     'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
+    'sugar.middleware.debugging.UserBasedExceptionMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'djangodblog.DBLogMiddleware',
+    'slimmer.middleware.CompressHtmlMiddleware',
+    'request.middleware.RequestMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
 )
 
@@ -42,8 +49,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.i18n",
     "django.core.context_processors.media",
     "basic.blog.context_processors.blog_settings",
-    "mingus.core.context_processors.site_info",
     "navbar.context_processors.navbars",
+    "staticfiles.context_processors.static_url",
 )
 
 INSTALLED_APPS = (
@@ -66,12 +73,11 @@ INSTALLED_APPS = (
     'basic.media',
     'oembed',
     'flatblocks',
-    'south',
+    'dbtemplates',
     'navbar',
     'sorl.thumbnail',
     'template_utils',
     'django_proxy',
-    'debug_toolbar',
 
     'django_markup',
     'google_analytics',
@@ -81,8 +87,29 @@ INSTALLED_APPS = (
     'contact_form',
     'honeypot',
     'sugar',
+    'quoteme',
     'mingus',
+    'debug_toolbar',
+
+    'django_twitter',
+    'django_bitly',
+    'staticfiles',
+    'tinymce',
+    'django_wysiwyg',
+    'request',
 )
+
+TINYMCE_JS_ROOT = STATIC_ROOT + '/mingus/js/tiny_mce/'
+TINYMCE_COMPRESSOR = True
+TINYMCE_DEFAULT_CONFIG = {
+    'theme': "advanced",
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10,
+    'theme_advanced_toolbar_location': "top",
+}
+
+DJANGO_WYSIWYG_MEDIA_URL = STATIC_URL + "mingus/js/ckeditor/"
+DJANGO_WYSIWYG_FLAVOR = "ckeditor"
 
 try:
     from local_settings import *
