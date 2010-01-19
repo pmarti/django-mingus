@@ -4,6 +4,8 @@ from django.test.client import Client
 
 
 class MingusClientTests(unittest.TestCase):
+    
+    fixtures = ['test_data.json',]
 
     def setUp(self):
         pass
