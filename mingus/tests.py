@@ -1,11 +1,10 @@
-import unittest
-
 from django.test.client import Client
+from django.test import TestCase
 
 
-class MingusClientTests(unittest.TestCase):
-    
-    fixtures = ['test_data.json',]
+class MingusClientTests(TestCase):
+
+    fixtures = ['test_data.json', ]
 
     def setUp(self):
         pass
