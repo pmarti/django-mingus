@@ -95,9 +95,9 @@ pre { background-color: #dac694;}
   height: 20px;
 }
 
-ul.archive li { text-transform: capitalize; }
+.archive li { text-transform: capitalize; }
 
-ul.crew li { display: inline; }
+.crew li { display: inline; }
 
 .crew-member { margin: 0 auto; }
 

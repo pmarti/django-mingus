@@ -106,7 +106,7 @@ body {
     text-align: center;
 }
 
-ul.recent-posts li, .post li
+.recent-posts li, .post li
 {
     list-style: none;
     list-style-position: inside;
@@ -169,11 +169,14 @@ pre, pre.prettify
     float: right;
 }
 
-ul.navbar-one li
+.navbar-one li
 {
   float:left;
   list-style: none;
   margin-left: .6em;
+  font-size: .9em;
+  text-decoration: none;
+  color: #999ca0;
 }
 
 #nav{ float: right; }
@@ -221,13 +224,6 @@ big { font-size: 1.7em; }
 
 .post .date, .bookmark .date, { color: #fff; }
 
-ul.navbar-one li
-{
-  font-size: .9em;
-  text-decoration: none;
-  color: #999ca0;
-}
-
 #footer p{ font-size: .8em; }
 
 .list-tease { font-size: .9em; }
@@ -248,7 +244,7 @@ h2 a:link, h2 a:visited { font-weight: 400; color: #333940;}
 
 h2 a:hover { font-weight: 400; color: #3c94bc;}
 
-#nav ul li a
+#nav li a
 {
   text-decoration: none;
   font-weight: 400;
@@ -286,7 +282,7 @@ h2 a:hover { font-weight: 400; color: #3c94bc;}
   content: "";
 }
 
-div.highlight {
+.highlight {
   margin-left: 2em ;
   margin-right: 2em ;
   background-color: #eeeeee
