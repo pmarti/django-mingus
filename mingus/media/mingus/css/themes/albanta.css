@@ -11,12 +11,14 @@ body {
 
 #logo h1 {
     margin-top: 100px;
-    margin-left: 470px;
+    margin-left: 350px;
 }
 
 #logo h1 a { color: #fff; font-size: 1.5em; }
 
 ul.navbar-one li a { color: #cddec6; font-weight: bold; }
+
+#mainsearch { margin-top: 43px; }
 
 .post .date, .bookmark .date {
     float: left;
@@ -92,6 +94,10 @@ pre { background-color: #dac694;}
 #contact-form input[type="text"] {
   height: 20px;
 }
+
+ul.archive li { text-transform: capitalize; }
+
+ul.crew li { display: inline; }
 
 .crew-member { margin: 0 auto; }
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.8.4\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-05 10:44+0100\n"
+"POT-Creation-Date: 2010-01-23 17:26+0100\n"
 "PO-Revision-Date: 2009-11-20 20:05+0100\n"
 "Last-Translator: Pablo Marti <pmargam@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -15,23 +15,20 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: local_settings.py:27
-msgid "English"
-msgstr "Inglés"
-
-#: local_settings.py:28
-msgid "Spanish"
-msgstr "Español"
+#: core/feeds.py:20 core/feeds.py:53
+#, python-format
+msgid "%s all entries feed"
+msgstr "Feed de todas las entradas en %s"
 
 #: core/feeds.py:23
 #, python-format
 msgid "All entries published and updated on %s"
 msgstr "Todas las entradas publicadas y actualizadas en %s"
 
-#: core/feeds.py:57
+#: core/feeds.py:66
 #, python-format
-msgid "Tagged posts on %s"
-msgstr "Entradas etiquetadas en %s"
+msgid "Posts recently tagged as %s"
+msgstr "Entradas recientemente etiquetadas como %s"
 
 #: core/views.py:226
 msgid "Search term was too vague. Please try again."
@@ -54,37 +51,33 @@ msgstr ""
 msgid "Oh well this is embarrassing"
 msgstr "Bueno, ¡qué vergüenza!"
 
-#: templates/base.html:88
+#: templates/base.html:83
 msgid "About"
 msgstr "Acerca de"
 
-#: templates/base.html:91
-msgid "Follow"
-msgstr "Seguir"
-
-#: templates/base.html:100
+#: templates/base.html:101
 msgid "Elsewhere"
 msgstr "En otros sitios"
 
-#: templates/base.html:112 templates/contact_form/contact_form_sent.html:12
+#: templates/base.html:113
+msgid "Categories"
+msgstr "Categorías"
+
+#: templates/base.html:125 templates/contact_form/contact_form_sent.html:13
 msgid "Recent Posts"
 msgstr "Entradas Recientes"
 
-#: templates/base.html:124
+#: templates/base.html:136
 msgid "Archive"
 msgstr "Archivo"
 
-#: templates/base.html:136
+#: templates/base.html:147
 msgid "BlogRoll"
 msgstr "BlogRoll"
 
-#: templates/base.html:148
+#: templates/base.html:159
 msgid "Popular Posts"
 msgstr "Entradas Populares"
-
-#: templates/base.html:160
-msgid "Tags"
-msgstr "Etiquetas"
 
 #: templates/admin/base_site.html:4
 msgid "Mingus site admin"
@@ -126,11 +119,11 @@ msgstr "Categorías de entradas"
 msgid "Tags:"
 msgstr "Etiquetas:"
 
-#: templates/blog/post_detail.html:59
+#: templates/blog/post_detail.html:60
 msgid "Related posts:"
 msgstr "Entradas relacionadas:"
 
-#: templates/blog/post_detail.html:70
+#: templates/blog/post_detail.html:71
 msgid "Spread the word:"
 msgstr "Difunde la palabra:"
 
@@ -155,7 +148,7 @@ msgid "Contact"
 msgstr "Contacto"
 
 #: templates/contact_form/contact_form.html:9
-#: templates/contact_form/contact_form_sent.html:7
+#: templates/contact_form/contact_form_sent.html:8
 msgid "Contact me"
 msgstr "Contáctame"
 
@@ -171,11 +164,23 @@ msgstr ""
 msgid "Woops, looks like you forgot some information."
 msgstr "Epa, parece que has olvidado algún dato."
 
+#: templates/contact_form/contact_form.html:30
+msgid "Your name"
+msgstr "Tu nombre"
+
+#: templates/contact_form/contact_form.html:35
+msgid "Your email"
+msgstr "Tu email"
+
+#: templates/contact_form/contact_form.html:40
+msgid "Your message"
+msgstr "Tu mensaje"
+
 #: templates/contact_form/contact_form.html:46
 msgid "Submit"
 msgstr "Enviar"
 
-#: templates/contact_form/contact_form_sent.html:9
+#: templates/contact_form/contact_form_sent.html:10
 msgid ""
 "Thanks! I'll make sure to respond shortly. In the meantime, check out some "
 "of my latest and greatest posts."
