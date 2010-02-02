@@ -24,27 +24,26 @@
     {% endfor %}
     </ul>
   </div>
-{% endif %}
+  {% endif %}
 
-<fieldset>
-  <label for="id_name">{% trans "Your name" %}</label>
-  {{ form.name }}
-</fieldset>
+<p>
+<label for="form.name.label">{% trans "Your name" %}</label>
+{{ form.name }}
+</p>
 
-<fieldset>
-  <label for="id_email">{% trans "Your email" %}</label>
-  {{ form.email }}
-</fieldset>
+<p>
+<label for="form.email.label">{% trans "Your email" %}</label>
+{{ form.email }}
+</p>
 
-<fieldset>
-  <label for="id_body">{% trans "Your message" %}</label>
-  {{ form.body }}
-</fieldset>
+<p>
+<label for="form.body.label">{% trans "Your message" %}</label>
+{{ form.body }}
+</p>
 
-<fieldset>
-  {% render_honeypot_field %}
-  <input type="submit" name="submit" value="{% trans "Submit" %}">
-</fieldset>
+{% render_honeypot_field %}
+
+<input type="submit" name="submit" value="Submit">
 </form>
 
 {% endblock %}
