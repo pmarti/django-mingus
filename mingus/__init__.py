@@ -8,6 +8,3 @@ signals.post_delete.connect(proxy_delete, Post)
 
 signals.post_save.connect(proxy_save, Bookmark, True)
 signals.post_delete.connect(proxy_delete, Bookmark)
-
-from mingus.code_block_directive import pygments_directive
-del pygments_directive
