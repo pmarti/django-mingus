@@ -89,10 +89,8 @@
           {% if BLOG_SETTINGS.rss_url %}<li><a href="{{ BLOG_SETTINGS.rss_url }}" title="Subscribe via RSS">RSS</a></li>{% endif %}
           {% if BLOG_SETTINGS.email_subscribe_url %}<li><a href="{{ BLOG_SETTINGS.email_subscribe_url }}" title="Subscribe via Email">Email</a></li>{% endif %}
 
-      {% if category %}<li><a href="/feeds/categories/{{ category.title|lower }}" title="Subscribe via RSS">RSS - {{ category }}</a></li>{% endif %}
-        {% if BLOG_SETTINGS_email_subscribe_url %}<li><a href="{{ BLOG_SETTINGS.email_subscribe_url }}" title="Subscribe via Email">Email</a></li>{% endif %}
-       </ul>
-
+          {% if category %}<li><a href="/feeds/categories/{{ category.title|lower }}" title="Subscribe via RSS">RSS - {{ category }}</a></li>{% endif %}
+          {% if BLOG_SETTINGS_email_subscribe_url %}<li><a href="{{ BLOG_SETTINGS.email_subscribe_url }}" title="Subscribe via Email">Email</a></li>{% endif %}
           </ul>
 
           {% cache 3600 "base.profiles" %}
