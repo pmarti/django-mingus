@@ -1,5 +1,5 @@
 body {
-    color: #cddec6;
+    color: #fff;
     background: #1e4f6a;
 }
 
@@ -27,7 +27,6 @@ ul.navbar-one li a { color: #cddec6; font-weight: bold; }
     -border-radius: 1.5em 0;
     text-transform: uppercase;
     padding: .3em .4em .3em 1.2em;
-    background: #c96c29;
     background: #4daaab;
     margin: 0.3em 0 0 -6.0em;
     width: 3.8em;
@@ -83,7 +82,7 @@ pre { background-color: #dac694;}
 #contact-form textarea, #contact-form input[type="text"] {
   background-color: #DAC694;
   border: 1px solid transparent;
-  color: #1C0B03;
+  color: #1c0b03;
   float: right;
   margin-bottom: 10px;
   padding: 0 5px;
@@ -100,7 +99,6 @@ pre { background-color: #dac694;}
 .crew li { display: inline; }
 
 .crew-member { margin: 0 auto; }
-
 .crew-member .picture { float: left; width: 55%; }
 .crew-member .legend { float: right; width: 45%; font-size: 1.1em; }
 .crew-member .bio { margin-left: 0.2em; font-size: 0.9em; }
