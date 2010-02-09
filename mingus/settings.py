@@ -91,18 +91,6 @@ INSTALLED_APPS = (
     'mingus',
     'debug_toolbar',
 
-    'django_markup',
-    'google_analytics',
-    'robots',
-    'basic.elsewhere',
-    'compressor',
-    'contact_form',
-    'honeypot',
-    'sugar',
-    'quoteme',
-    'mingus.core',
-    'debug_toolbar',
-
     'django_twitter',
     'django_bitly',
     'staticfiles',
